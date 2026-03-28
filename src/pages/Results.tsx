@@ -30,37 +30,38 @@ const caseStudies = [
 
 const Results = () => (
   <Layout>
-    <section className="bg-hero text-hero-foreground section-padding">
+    <section className="section-padding pt-32 md:pt-40">
       <div className="container-narrow max-w-3xl mx-auto">
         <FadeIn>
-          <h1 className="font-display font-extrabold text-4xl md:text-5xl">Results</h1>
-          <p className="mt-5 text-hero-muted text-lg">Real numbers from real businesses we've worked with.</p>
+          <p className="text-sm font-medium text-primary mb-3">Results</p>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight">Real numbers from real businesses</h1>
+          <p className="mt-5 text-muted-foreground text-lg">Here's what happened when they started working with us.</p>
         </FadeIn>
       </div>
     </section>
 
-    <section className="section-padding bg-background">
-      <div className="container-narrow space-y-10">
+    <section className="section-padding">
+      <div className="container-narrow space-y-6">
         {caseStudies.map((cs, i) => (
           <FadeIn key={cs.industry} delay={i * 0.1}>
-            <div className="rounded-2xl border border-border bg-card overflow-hidden">
-              <div className="bg-primary text-primary-foreground px-8 py-4 flex items-center justify-between">
-                <h3 className="font-display font-bold text-lg">{cs.industry}</h3>
-                <div className="flex items-center gap-2 text-gold font-display font-bold text-sm">
-                  <TrendingUp size={18} /> {cs.metric}
+            <div className="rounded-2xl border border-border bg-card overflow-hidden hover:border-primary/30 transition-all">
+              <div className="px-8 py-5 border-b border-border flex items-center justify-between">
+                <h3 className="font-bold text-lg text-foreground">{cs.industry}</h3>
+                <div className="flex items-center gap-2 text-primary font-bold text-sm">
+                  <TrendingUp size={16} /> {cs.metric}
                 </div>
               </div>
               <div className="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-gold">The problem</span>
+                  <span className="text-xs font-bold text-primary">The problem</span>
                   <p className="text-muted-foreground text-sm mt-2 leading-relaxed">{cs.challenge}</p>
                 </div>
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-gold">What we did</span>
+                  <span className="text-xs font-bold text-primary">What we did</span>
                   <p className="text-muted-foreground text-sm mt-2 leading-relaxed">{cs.solution}</p>
                 </div>
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-gold">The outcome</span>
+                  <span className="text-xs font-bold text-primary">The outcome</span>
                   <p className="text-muted-foreground text-sm mt-2 leading-relaxed">{cs.result}</p>
                 </div>
               </div>
@@ -70,11 +71,11 @@ const Results = () => (
       </div>
     </section>
 
-    <section className="section-padding bg-secondary">
-      <div className="container-narrow max-w-2xl mx-auto">
+    <section className="section-padding border-t border-border">
+      <div className="container-narrow max-w-2xl mx-auto text-center">
         <FadeIn>
-          <h2 className="font-display font-extrabold text-3xl text-foreground">Want to see what we can do for you?</h2>
-          <Button variant="gold" size="lg" className="mt-8 text-base px-10" asChild>
+          <h2 className="text-3xl font-extrabold text-foreground">Want to see what we can do for you?</h2>
+          <Button variant="gold" size="lg" className="mt-8" asChild>
             <Link to="/contact">Let's talk <ArrowRight className="ml-1" size={18} /></Link>
           </Button>
         </FadeIn>

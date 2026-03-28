@@ -18,18 +18,17 @@ const Index = () => (
     <TestimonialsSection />
 
     {/* Final CTA */}
-    <section className="section-padding bg-background">
+    <section className="section-padding border-t border-border">
       <div className="container-narrow max-w-2xl mx-auto text-center">
         <FadeIn>
-          <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-4">Next step</p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground leading-tight">
-            Let's start a conversation.
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
+            Ready to get started?
           </h2>
-          <p className="text-muted-foreground mt-6 text-lg leading-relaxed max-w-md mx-auto">
-            No commitment. Just a candid discussion about whether this is the right fit for your business.
+          <p className="text-muted-foreground mt-4 text-lg leading-relaxed max-w-md mx-auto">
+            No commitment. Just a candid discussion about whether this is the right fit.
           </p>
-          <Button variant="gold" size="lg" className="mt-10 text-sm tracking-wider uppercase px-12" asChild>
-            <Link to="/contact">Book a call <ArrowRight className="ml-2" size={16} /></Link>
+          <Button variant="gold" size="lg" className="mt-8" asChild>
+            <Link to="/contact">Book a call <ArrowRight className="ml-1.5" size={16} /></Link>
           </Button>
         </FadeIn>
       </div>
