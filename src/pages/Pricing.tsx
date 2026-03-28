@@ -8,44 +8,38 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const plans = [
   {
     name: "Starter",
-    price: "Custom",
-    period: "",
-    desc: "Perfect for testing the waters.",
-    features: ["1 industry", "100 leads/month", "Personalised emails", "Basic follow-up sequence", "Monthly report", "Email support"],
+    desc: "Good for testing the waters.",
+    features: ["1 industry", "100 leads/month", "Personalised emails", "Basic follow-ups", "Monthly report", "Email support"],
     highlighted: false,
   },
   {
     name: "Growth",
-    price: "Custom",
-    period: "",
-    desc: "Most popular for growing businesses.",
+    desc: "Our most popular option.",
     features: ["Multi-industry targeting", "300 leads/month", "Full follow-up sequences", "Reply & opt-out tracking", "Weekly reports", "Priority support"],
     highlighted: true,
   },
   {
     name: "Scale",
-    price: "Custom",
-    period: "",
-    desc: "For businesses ready to dominate.",
-    features: ["Unlimited industries", "1,000+ leads/month", "Advanced AI personalisation", "Custom reporting dashboard", "Dedicated account manager", "Priority support"],
+    desc: "For businesses ready to go all-in.",
+    features: ["Unlimited industries", "1,000+ leads/month", "Advanced personalisation", "Custom reporting", "Dedicated account manager", "Priority support"],
     highlighted: false,
   },
 ];
 
 const faqs = [
-  { q: "What industries do you work with?", a: "We work with any local service business — dental, plumbing, HVAC, electrical, accounting, law firms, real estate, cleaning, gyms, and more." },
-  { q: "How quickly will I see results?", a: "Most clients start seeing booked calls within the first 5–7 days of their campaign launching." },
-  { q: "Do I need any software or tools?", a: "Nope. We handle everything — from lead sourcing to email delivery. All you need is a calendar and an inbox." },
-  { q: "Can I pause or cancel anytime?", a: "Absolutely. There are no long-term contracts. You can pause or cancel at any time with 30 days' notice." },
+  { q: "What kind of businesses do you work with?", a: "Local service businesses — dentists, plumbers, accountants, lawyers, cleaners, gyms, and plenty more. If you serve clients locally, we can probably help." },
+  { q: "How fast will I get results?", a: "Most people start seeing booked calls within the first week. It depends on your industry and market, but we move quickly." },
+  { q: "Do I need to set anything up?", a: "No. We handle everything — lead sourcing, emails, follow-ups. You just need a calendar and an inbox." },
+  { q: "Can I cancel anytime?", a: "Yes. No long-term contracts. 30 days' notice and you're out." },
 ];
 
 const Pricing = () => (
   <Layout>
     <section className="bg-hero text-hero-foreground section-padding">
-      <div className="container-narrow text-center max-w-3xl mx-auto">
+      <div className="container-narrow max-w-3xl mx-auto">
         <FadeIn>
-          <h1 className="font-display font-extrabold text-4xl md:text-5xl">Simple, Transparent <span className="text-gradient-gold">Pricing</span></h1>
-          <p className="mt-5 text-hero-muted text-lg">No hidden fees. No long-term contracts. Contact us to find the right plan for your business.</p>
+          <h1 className="font-display font-extrabold text-4xl md:text-5xl">Pricing</h1>
+          <p className="mt-5 text-hero-muted text-lg">No hidden fees, no long contracts. Get in touch and we'll find the right fit.</p>
         </FadeIn>
       </div>
     </section>
@@ -62,15 +56,11 @@ const Pricing = () => (
               }`}>
                 {plan.highlighted && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-accent-foreground text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
-                    Most Popular
+                    Popular
                   </span>
                 )}
                 <h3 className="font-display font-bold text-xl text-foreground">{plan.name}</h3>
                 <p className="text-muted-foreground text-sm mt-1">{plan.desc}</p>
-                <div className="mt-6">
-                  <span className="font-display font-extrabold text-4xl text-foreground">{plan.price}</span>
-                  <span className="text-muted-foreground text-sm">{plan.period}</span>
-                </div>
                 <ul className="mt-6 space-y-3 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm text-foreground">
@@ -85,7 +75,7 @@ const Pricing = () => (
                   className="mt-8 w-full"
                   asChild
                 >
-                  <Link to="/contact">Contact Us <ArrowRight className="ml-1" size={16} /></Link>
+                  <Link to="/contact">Get in touch <ArrowRight className="ml-1" size={16} /></Link>
                 </Button>
               </div>
             </FadeIn>
@@ -96,7 +86,7 @@ const Pricing = () => (
 
     <section className="section-padding bg-secondary">
       <div className="container-narrow max-w-2xl mx-auto">
-        <FadeIn><h2 className="font-display font-extrabold text-3xl text-center text-foreground">Frequently Asked Questions</h2></FadeIn>
+        <FadeIn><h2 className="font-display font-extrabold text-3xl text-foreground">Common questions</h2></FadeIn>
         <FadeIn delay={0.1}>
           <Accordion type="single" collapsible className="mt-10">
             {faqs.map((faq, i) => (
