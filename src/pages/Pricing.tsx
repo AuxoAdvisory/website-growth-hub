@@ -45,7 +45,7 @@ const Pricing = () => (
       <div className="container-narrow text-center max-w-3xl mx-auto">
         <FadeIn>
           <h1 className="font-display font-extrabold text-4xl md:text-5xl">Simple, Transparent <span className="text-gradient-gold">Pricing</span></h1>
-          <p className="mt-5 text-hero-muted text-lg">No hidden fees. No long-term contracts. Pick a plan and start getting booked calls.</p>
+          <p className="mt-5 text-hero-muted text-lg">No hidden fees. No long-term contracts. Contact us to find the right plan for your business.</p>
         </FadeIn>
       </div>
     </section>
