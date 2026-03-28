@@ -43,7 +43,7 @@ const About = () => (
                 Timothy founded Auxo Advisory after seeing too many talented local service professionals struggle with one thing: finding clients. They were incredible at their craft — whether it was fixing pipes, managing finances, or keeping patients healthy — but marketing and sales? That was a different story.
               </p>
               <p>
-                MedProspect was born from a simple idea: what if these businesses could have a dedicated team finding and warming up leads for them, so they could focus entirely on delivering great service?
+                Auxo Advisory was born from a simple idea: what if these businesses could have a dedicated team finding and warming up leads for them, so they could focus entirely on delivering great service?
               </p>
               <p>
                 Today, MedProspect combines AI-powered lead scoring, personalised outreach, and automated follow-ups to deliver a steady stream of booked calls to service businesses across 10+ industries.
