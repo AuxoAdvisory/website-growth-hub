@@ -43,7 +43,7 @@ const features = [
 ];
 
 const testimonials = [
-  { quote: "MedProspect booked me 6 calls in the first week. I've never had this kind of pipeline before.", name: "Dr. Sarah Mitchell", role: "Dental Consultant" },
+  { quote: "Auxo Advisory booked me 6 calls in the first week. I've never had this kind of pipeline before.", name: "Dr. Sarah Mitchell", role: "Dental Consultant" },
   { quote: "We went from cold-calling ourselves to having warm leads show up on our calendar. Game changer.", name: "Mike Torres", role: "HVAC Business Owner" },
   { quote: "The personalised emails actually get replies. Our close rate went through the roof.", name: "Karen Li", role: "Accounting Firm Partner" },
 ];

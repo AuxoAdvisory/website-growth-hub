@@ -46,7 +46,7 @@ const About = () => (
                 Auxo Advisory was born from a simple idea: what if these businesses could have a dedicated team finding and warming up leads for them, so they could focus entirely on delivering great service?
               </p>
               <p>
-                Today, MedProspect combines AI-powered lead scoring, personalised outreach, and automated follow-ups to deliver a steady stream of booked calls to service businesses across 10+ industries.
+                Today, Auxo Advisory combines AI-powered lead scoring, personalised outreach, and automated follow-ups to deliver a steady stream of booked calls to service businesses across 10+ industries.
               </p>
             </div>
           </FadeIn>
