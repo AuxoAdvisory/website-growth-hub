@@ -8,24 +8,24 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const plans = [
   {
     name: "Starter",
-    price: "$497",
-    period: "/mo",
+    price: "Custom",
+    period: "",
     desc: "Perfect for testing the waters.",
     features: ["1 industry", "100 leads/month", "Personalised emails", "Basic follow-up sequence", "Monthly report", "Email support"],
     highlighted: false,
   },
   {
     name: "Growth",
-    price: "$997",
-    period: "/mo",
+    price: "Custom",
+    period: "",
     desc: "Most popular for growing businesses.",
     features: ["Multi-industry targeting", "300 leads/month", "Full follow-up sequences", "Reply & opt-out tracking", "Weekly reports", "Priority support"],
     highlighted: true,
   },
   {
     name: "Scale",
-    price: "$1,997",
-    period: "/mo",
+    price: "Custom",
+    period: "",
     desc: "For businesses ready to dominate.",
     features: ["Unlimited industries", "1,000+ leads/month", "Advanced AI personalisation", "Custom reporting dashboard", "Dedicated account manager", "Priority support"],
     highlighted: false,
@@ -45,7 +45,7 @@ const Pricing = () => (
       <div className="container-narrow text-center max-w-3xl mx-auto">
         <FadeIn>
           <h1 className="font-display font-extrabold text-4xl md:text-5xl">Simple, Transparent <span className="text-gradient-gold">Pricing</span></h1>
-          <p className="mt-5 text-hero-muted text-lg">No hidden fees. No long-term contracts. Pick a plan and start getting booked calls.</p>
+          <p className="mt-5 text-hero-muted text-lg">No hidden fees. No long-term contracts. Contact us to find the right plan for your business.</p>
         </FadeIn>
       </div>
     </section>
@@ -85,7 +85,7 @@ const Pricing = () => (
                   className="mt-8 w-full"
                   asChild
                 >
-                  <Link to="/contact">Get Started <ArrowRight className="ml-1" size={16} /></Link>
+                  <Link to="/contact">Contact Us <ArrowRight className="ml-1" size={16} /></Link>
                 </Button>
               </div>
             </FadeIn>
