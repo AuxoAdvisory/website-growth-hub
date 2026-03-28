@@ -34,7 +34,7 @@ const Results = () => (
       <div className="container-narrow text-center max-w-3xl mx-auto">
         <FadeIn>
           <h1 className="font-display font-extrabold text-4xl md:text-5xl">Real <span className="text-gradient-gold">Results</span> for Real Businesses</h1>
-          <p className="mt-5 text-hero-muted text-lg">See how local service businesses are growing with MedProspect.</p>
+          <p className="mt-5 text-hero-muted text-lg">See how local service businesses are growing with Auxo Advisory.</p>
         </FadeIn>
       </div>
     </section>

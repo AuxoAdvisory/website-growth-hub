@@ -22,7 +22,7 @@ const HowItWorks = () => (
     <section className="bg-hero text-hero-foreground section-padding">
       <div className="container-narrow text-center max-w-3xl mx-auto">
         <FadeIn>
-          <h1 className="font-display font-extrabold text-4xl md:text-5xl">How <span className="text-gradient-gold">MedProspect</span> Works</h1>
+          <h1 className="font-display font-extrabold text-4xl md:text-5xl">How <span className="text-gradient-gold">Auxo Advisory</span> Works</h1>
           <p className="mt-5 text-hero-muted text-lg">From onboarding to booked calls in under a week. Here's the full process.</p>
         </FadeIn>
       </div>

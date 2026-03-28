@@ -6,7 +6,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
           <Link to="/" className="font-display font-extrabold text-2xl text-hero-foreground">
-            <span className="text-gold">Med</span>Prospect
+            <span className="text-gold">Auxo</span> Advisory
           </Link>
           <p className="mt-3 text-sm leading-relaxed max-w-sm">
             Done-for-you lead generation and cold outreach for local service businesses. Growth on autopilot.

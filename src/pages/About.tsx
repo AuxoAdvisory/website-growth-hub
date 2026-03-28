@@ -37,16 +37,16 @@ const About = () => (
             </div>
           </FadeIn>
           <FadeIn delay={0.15} className="md:col-span-3">
-            <h2 className="font-display font-extrabold text-2xl md:text-3xl text-foreground">The Story Behind MedProspect</h2>
+            <h2 className="font-display font-extrabold text-2xl md:text-3xl text-foreground">The Story Behind Auxo Advisory</h2>
             <div className="mt-4 space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 Timothy founded Auxo Advisory after seeing too many talented local service professionals struggle with one thing: finding clients. They were incredible at their craft — whether it was fixing pipes, managing finances, or keeping patients healthy — but marketing and sales? That was a different story.
               </p>
               <p>
-                MedProspect was born from a simple idea: what if these businesses could have a dedicated team finding and warming up leads for them, so they could focus entirely on delivering great service?
+                Auxo Advisory was born from a simple idea: what if these businesses could have a dedicated team finding and warming up leads for them, so they could focus entirely on delivering great service?
               </p>
               <p>
-                Today, MedProspect combines AI-powered lead scoring, personalised outreach, and automated follow-ups to deliver a steady stream of booked calls to service businesses across 10+ industries.
+                Today, Auxo Advisory combines AI-powered lead scoring, personalised outreach, and automated follow-ups to deliver a steady stream of booked calls to service businesses across 10+ industries.
               </p>
             </div>
           </FadeIn>
