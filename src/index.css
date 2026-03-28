@@ -2,60 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 25% 12%;
+    --background: 228 14% 10%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 25% 12%;
+    --card: 228 14% 13%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 12%;
+    --popover: 228 14% 13%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 220 55% 15%;
+    --primary: 252 56% 57%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 96%;
-    --secondary-foreground: 220 25% 12%;
+    --secondary: 228 14% 16%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 220 15% 96%;
-    --muted-foreground: 220 8% 46%;
+    --muted: 228 10% 18%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 45 80% 52%;
-    --accent-foreground: 220 55% 10%;
+    --accent: 252 56% 57%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 12% 90%;
-    --input: 220 12% 90%;
-    --ring: 220 55% 15%;
+    --border: 228 10% 20%;
+    --input: 228 10% 20%;
+    --ring: 252 56% 57%;
 
-    --radius: 0.375rem;
+    --radius: 0.75rem;
 
-    /* Custom tokens */
-    --hero-bg: 220 55% 10%;
+    --hero-bg: 228 14% 8%;
     --hero-foreground: 0 0% 98%;
-    --hero-muted: 220 15% 68%;
-    --gold: 45 80% 52%;
-    --gold-hover: 45 80% 45%;
-    --navy: 220 55% 10%;
-    --navy-light: 220 35% 20%;
+    --hero-muted: 220 10% 55%;
+    --gold: 252 56% 57%;
+    --gold-hover: 252 56% 50%;
+    --navy: 228 14% 8%;
+    --navy-light: 228 14% 16%;
 
-    --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', -apple-system, sans-serif;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 228 14% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 252 56% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 228 14% 16%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 228 10% 20%;
+    --sidebar-ring: 252 56% 57%;
   }
 }
 
@@ -70,8 +68,8 @@
     -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-    letter-spacing: -0.01em;
+    font-family: var(--font-body);
+    font-weight: 700;
   }
 }
 
@@ -80,16 +78,16 @@
     @apply px-6 py-24 md:px-10 lg:py-32;
   }
   .container-narrow {
-    @apply mx-auto max-w-5xl;
+    @apply mx-auto max-w-6xl;
   }
   .editorial-divider {
-    @apply w-16 h-px bg-gold mt-6;
+    @apply w-16 h-px bg-primary mt-6;
   }
 }
 
 @layer utilities {
-  .text-gradient-gold {
+  .text-gradient-primary {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--gold)), hsl(45, 80%, 62%));
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(270, 70%, 70%));
   }
 }

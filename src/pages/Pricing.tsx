@@ -27,7 +27,7 @@ const plans = [
 ];
 
 const faqs = [
-  { q: "What kind of businesses do you work with?", a: "Local service businesses — dentists, plumbers, accountants, lawyers, cleaners, gyms, and plenty more. If you serve clients locally, we can probably help." },
+  { q: "What kind of businesses do you work with?", a: "Local service businesses — dentists, plumbers, accountants, lawyers, cleaners, gyms, and plenty more." },
   { q: "How fast will I get results?", a: "Most people start seeing booked calls within the first week. It depends on your industry and market, but we move quickly." },
   { q: "Do I need to set anything up?", a: "No. We handle everything — lead sourcing, emails, follow-ups. You just need a calendar and an inbox." },
   { q: "Can I cancel anytime?", a: "Yes. No long-term contracts. 30 days' notice and you're out." },
@@ -35,36 +35,37 @@ const faqs = [
 
 const Pricing = () => (
   <Layout>
-    <section className="bg-hero text-hero-foreground section-padding">
-      <div className="container-narrow max-w-3xl mx-auto">
+    <section className="section-padding pt-32 md:pt-40">
+      <div className="container-narrow max-w-3xl mx-auto text-center">
         <FadeIn>
-          <h1 className="font-display font-extrabold text-4xl md:text-5xl">Pricing</h1>
-          <p className="mt-5 text-hero-muted text-lg">No hidden fees, no long contracts. Get in touch and we'll find the right fit.</p>
+          <p className="text-sm font-medium text-primary mb-3">Pricing</p>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight">Simple, transparent pricing</h1>
+          <p className="mt-5 text-muted-foreground text-lg">No hidden fees, no long contracts. Get in touch and we'll find the right fit.</p>
         </FadeIn>
       </div>
     </section>
 
-    <section className="section-padding bg-background">
+    <section className="section-padding">
       <div className="container-narrow">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {plans.map((plan, i) => (
             <FadeIn key={plan.name} delay={i * 0.1}>
-              <div className={`rounded-2xl p-8 border flex flex-col h-full ${
+              <div className={`rounded-2xl p-8 border flex flex-col h-full transition-all ${
                 plan.highlighted
-                  ? "border-gold bg-gold/5 shadow-xl shadow-gold/10 relative"
-                  : "border-border bg-card"
+                  ? "border-primary bg-primary/5 shadow-xl shadow-primary/10 relative"
+                  : "border-border bg-card hover:border-primary/30"
               }`}>
                 {plan.highlighted && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-accent-foreground text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full">
                     Popular
                   </span>
                 )}
-                <h3 className="font-display font-bold text-xl text-foreground">{plan.name}</h3>
+                <h3 className="font-bold text-xl text-foreground">{plan.name}</h3>
                 <p className="text-muted-foreground text-sm mt-1">{plan.desc}</p>
                 <ul className="mt-6 space-y-3 flex-1">
                   {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-foreground">
-                      <Check className="text-gold flex-shrink-0 mt-0.5" size={16} />
+                    <li key={f} className="flex items-start gap-2.5 text-sm text-foreground">
+                      <Check className="text-primary flex-shrink-0 mt-0.5" size={16} />
                       {f}
                     </li>
                   ))}
@@ -75,7 +76,7 @@ const Pricing = () => (
                   className="mt-8 w-full"
                   asChild
                 >
-                  <Link to="/contact">Get in touch <ArrowRight className="ml-1" size={16} /></Link>
+                  <Link to="/contact">Get started <ArrowRight className="ml-1" size={16} /></Link>
                 </Button>
               </div>
             </FadeIn>
@@ -84,14 +85,14 @@ const Pricing = () => (
       </div>
     </section>
 
-    <section className="section-padding bg-secondary">
+    <section className="section-padding border-t border-border">
       <div className="container-narrow max-w-2xl mx-auto">
-        <FadeIn><h2 className="font-display font-extrabold text-3xl text-foreground">Common questions</h2></FadeIn>
+        <FadeIn><h2 className="text-3xl font-extrabold text-foreground mb-8">Common questions</h2></FadeIn>
         <FadeIn delay={0.1}>
-          <Accordion type="single" collapsible className="mt-10">
+          <Accordion type="single" collapsible>
             {faqs.map((faq, i) => (
-              <AccordionItem key={i} value={`faq-${i}`}>
-                <AccordionTrigger className="font-display font-semibold text-foreground text-left">{faq.q}</AccordionTrigger>
+              <AccordionItem key={i} value={`faq-${i}`} className="border-border">
+                <AccordionTrigger className="font-semibold text-foreground text-left">{faq.q}</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed">{faq.a}</AccordionContent>
               </AccordionItem>
             ))}

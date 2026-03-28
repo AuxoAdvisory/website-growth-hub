@@ -1,4 +1,5 @@
 import FadeIn from "@/components/FadeIn";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   { quote: "I was sceptical, but they booked me 6 calls in week one. I've never had leads come to me like that before.", name: "Dr. Sarah M.", role: "Dental Consultant" },
@@ -7,23 +8,25 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => (
-  <section className="section-padding bg-hero text-hero-foreground">
+  <section className="section-padding">
     <div className="container-narrow">
       <FadeIn>
-        <p className="text-xs font-semibold tracking-widest uppercase text-hero-muted mb-4">Testimonials</p>
-        <h2 className="font-display text-3xl md:text-4xl leading-tight max-w-lg">
-          What our clients say
-        </h2>
-        <div className="w-16 h-px bg-gold/50 mt-6" />
+        <div className="text-center mb-16">
+          <p className="text-sm font-medium text-primary mb-3">Testimonials</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
+            What our clients say
+          </h2>
+        </div>
       </FadeIn>
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((t, i) => (
           <FadeIn key={t.name} delay={i * 0.1}>
-            <div className="border-t border-hero-muted/20 pt-8">
-              <p className="text-hero-muted text-sm leading-relaxed italic">"{t.quote}"</p>
-              <div className="mt-6">
-                <p className="text-sm font-semibold text-hero-foreground">{t.name}</p>
-                <p className="text-xs text-hero-muted mt-0.5">{t.role}</p>
+            <div className="rounded-2xl border border-border bg-card p-8 hover:border-primary/30 transition-all">
+              <Quote className="text-primary/40 mb-4" size={24} />
+              <p className="text-foreground text-sm leading-relaxed">{t.quote}</p>
+              <div className="mt-6 pt-4 border-t border-border">
+                <p className="text-sm font-semibold text-foreground">{t.name}</p>
+                <p className="text-xs text-muted-foreground mt-0.5">{t.role}</p>
               </div>
             </div>
           </FadeIn>

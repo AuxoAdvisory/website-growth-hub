@@ -5,7 +5,6 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navItems = [
-  { label: "Home", href: "/" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Pricing", href: "/pricing" },
   { label: "Results", href: "/results" },
@@ -17,38 +16,38 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/98 backdrop-blur-sm border-b border-navy-light/30">
-      <div className="container-narrow flex items-center justify-between h-[72px] px-6 md:px-10">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Auxo Advisory" className="h-9 w-auto rounded bg-background/95 p-0.5" />
-          <span className="font-body text-sm font-semibold tracking-widest uppercase text-hero-foreground">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
+      <div className="container-narrow flex items-center justify-between h-16 px-6 md:px-10">
+        <Link to="/" className="flex items-center gap-2.5">
+          <img src={logo} alt="Auxo Advisory" className="h-8 w-auto rounded-lg" />
+          <span className="font-semibold text-foreground text-base">
             Auxo Advisory
           </span>
         </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
             <Link
               key={item.href}
               to={item.href}
-              className={`text-[13px] font-medium tracking-wide uppercase transition-colors ${
+              className={`px-4 py-2 text-sm rounded-full transition-colors ${
                 location.pathname === item.href
-                  ? "text-hero-foreground"
-                  : "text-hero-muted hover:text-hero-foreground"
+                  ? "text-foreground bg-secondary"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
               }`}
             >
               {item.label}
             </Link>
           ))}
-          <Button variant="gold" size="sm" className="ml-2 text-xs tracking-wider uppercase" asChild>
-            <Link to="/contact">Get in touch</Link>
+          <Button variant="gold" size="sm" className="ml-3" asChild>
+            <Link to="/contact">Get started</Link>
           </Button>
         </div>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-hero-foreground"
+          className="md:hidden text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -57,23 +56,23 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-navy border-t border-navy-light/30 px-6 pb-6">
+        <div className="md:hidden bg-background border-t border-border px-6 pb-6">
           {navItems.map((item) => (
             <Link
               key={item.href}
               to={item.href}
               onClick={() => setMobileOpen(false)}
-              className={`block py-3 text-sm font-medium tracking-wide ${
+              className={`block py-3 text-sm font-medium ${
                 location.pathname === item.href
-                  ? "text-hero-foreground"
-                  : "text-hero-muted"
+                  ? "text-foreground"
+                  : "text-muted-foreground"
               }`}
             >
               {item.label}
             </Link>
           ))}
-          <Button variant="gold" size="sm" className="w-full mt-3 text-xs tracking-wider uppercase" asChild>
-            <Link to="/contact" onClick={() => setMobileOpen(false)}>Get in touch</Link>
+          <Button variant="gold" size="sm" className="w-full mt-3" asChild>
+            <Link to="/contact" onClick={() => setMobileOpen(false)}>Get started</Link>
           </Button>
         </div>
       )}

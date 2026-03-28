@@ -13,48 +13,43 @@ const values = [
 
 const About = () => (
   <Layout>
-    <section className="bg-hero text-hero-foreground section-padding">
+    <section className="section-padding pt-32 md:pt-40">
       <div className="container-narrow max-w-3xl mx-auto">
         <FadeIn>
-          <h1 className="font-display font-extrabold text-4xl md:text-5xl">About us</h1>
-          <p className="mt-5 text-hero-muted text-lg">We help local service businesses get clients without the grind of manual prospecting.</p>
+          <p className="text-sm font-medium text-primary mb-3">About us</p>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight">
+            We help local businesses get clients without the grind
+          </h1>
+          <p className="mt-5 text-muted-foreground text-lg">No manual prospecting. No cold calls. Just warm leads on your calendar.</p>
         </FadeIn>
       </div>
     </section>
 
-    <section className="section-padding bg-background">
+    <section className="section-padding border-t border-border">
       <div className="container-narrow max-w-3xl mx-auto">
         <FadeIn>
-          <h2 className="font-display font-extrabold text-2xl md:text-3xl text-foreground">Why we started Auxo Advisory</h2>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground">Why we started Auxo Advisory</h2>
           <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
-            <p>
-              We kept meeting people who were brilliant at their work — dentists, plumbers, accountants, lawyers — but struggling to find enough clients. They didn't have time for marketing, and hiring a salesperson wasn't realistic.
-            </p>
-            <p>
-              So we built something simple: a service that finds the right people, writes them a genuine email, and gets them on your calendar. You focus on what you're good at. We handle the rest.
-            </p>
-            <p>
-              Today we work with businesses across 10+ industries, combining smart lead scoring with outreach that actually sounds like it was written by a person (because it was, with a bit of AI help).
-            </p>
+            <p>We kept meeting people who were brilliant at their work — dentists, plumbers, accountants, lawyers — but struggling to find enough clients.</p>
+            <p>So we built something simple: a service that finds the right people, writes them a genuine email, and gets them on your calendar.</p>
+            <p>Today we work with businesses across 10+ industries, combining smart lead scoring with outreach that actually sounds like it was written by a person.</p>
           </div>
         </FadeIn>
       </div>
     </section>
 
-    <section className="section-padding bg-secondary">
+    <section className="section-padding border-t border-border">
       <div className="container-narrow max-w-4xl mx-auto">
-        <FadeIn><h2 className="font-display font-extrabold text-3xl text-foreground">What we care about</h2></FadeIn>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <FadeIn><h2 className="text-3xl font-extrabold text-foreground mb-10">What we care about</h2></FadeIn>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {values.map((v, i) => (
             <FadeIn key={v.title} delay={i * 0.08}>
-              <div className="flex gap-4 items-start">
-                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center mt-0.5">
-                  <v.icon className="text-gold" size={20} />
+              <div className="rounded-2xl border border-border bg-card p-6 hover:border-primary/30 transition-all group">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <v.icon className="text-primary" size={20} />
                 </div>
-                <div>
-                  <h3 className="font-display font-bold text-foreground">{v.title}</h3>
-                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{v.desc}</p>
-                </div>
+                <h3 className="font-bold text-foreground">{v.title}</h3>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{v.desc}</p>
               </div>
             </FadeIn>
           ))}
@@ -62,12 +57,12 @@ const About = () => (
       </div>
     </section>
 
-    <section className="section-padding bg-background">
-      <div className="container-narrow max-w-2xl mx-auto">
+    <section className="section-padding border-t border-border">
+      <div className="container-narrow max-w-2xl mx-auto text-center">
         <FadeIn>
-          <h2 className="font-display font-extrabold text-3xl text-foreground">Want to work together?</h2>
+          <h2 className="text-3xl font-extrabold text-foreground">Want to work together?</h2>
           <p className="text-muted-foreground mt-3">Let's have a quick conversation. No obligations.</p>
-          <Button variant="gold" size="lg" className="mt-8 text-base px-10" asChild>
+          <Button variant="gold" size="lg" className="mt-8" asChild>
             <Link to="/contact">Book a free call <ArrowRight className="ml-1" size={18} /></Link>
           </Button>
         </FadeIn>
