@@ -2,9 +2,9 @@ import FadeIn from "@/components/FadeIn";
 import { Search, Wrench, TrendingUp } from "lucide-react";
 
 const steps = [
-  { icon: Search, num: "01", title: "We find the problem", desc: "We audit your online presence — reviews, website speed, booking flow, and search rankings — to find exactly where you're losing patients." },
+  { icon: Search, num: "01", title: "We find the problem", desc: "We audit your online presence — reviews, website speed, booking flow, and search rankings — to find exactly where you're losing clients." },
   { icon: Wrench, num: "02", title: "We build the fix", desc: "From AI chatbots to review management to website rebuilds — we deploy the right tools to plug the gaps." },
-  { icon: TrendingUp, num: "03", title: "You get more patients", desc: "More bookings, more reviews, more calls. You focus on patient care while we handle the growth." },
+  { icon: TrendingUp, num: "03", title: "You get more clients", desc: "More bookings, more reviews, more calls. You focus on your business while we handle the growth." },
 ];
 
 const ProcessSection = () => (

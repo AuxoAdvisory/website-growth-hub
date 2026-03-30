@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { Zap, Eye, TrendingUp, Search, ArrowRight } from "lucide-react";
 
 const values = [
-  { icon: Search, title: "We audit first", desc: "We don't sell you things you don't need. We look at your practice's online presence and find the real gaps." },
+  { icon: Search, title: "We audit first", desc: "We don't sell you things you don't need. We look at your business's online presence and find the real gaps." },
   { icon: Zap, title: "We move fast", desc: "Your tools go live in days, not weeks. We don't waste time on long setups or endless meetings." },
   { icon: Eye, title: "Full transparency", desc: "No black boxes. You see exactly what we're doing, how it's performing, and what's next." },
-  { icon: TrendingUp, title: "Results only", desc: "We measure success by one thing: more patients on your calendar." },
+  { icon: TrendingUp, title: "Results only", desc: "We measure success by one thing: more clients on your calendar." },
 ];
 
 const About = () => (
@@ -18,9 +18,9 @@ const About = () => (
         <FadeIn>
           <p className="text-sm font-medium text-primary mb-3">About us</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight">
-            A small team helping small practices grow
+            A small team helping small businesses grow
           </h1>
-          <p className="mt-5 text-muted-foreground text-lg">GTA-based. No fluff. Just straightforward AI consulting for healthcare.</p>
+          <p className="mt-5 text-muted-foreground text-lg">Canadian-based. No fluff. Just straightforward AI consulting for local businesses.</p>
         </FadeIn>
       </div>
     </section>
@@ -30,9 +30,9 @@ const About = () => (
         <FadeIn>
           <h2 className="text-2xl md:text-3xl font-extrabold text-foreground">Why we started Auxo Advisory</h2>
           <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
-            <p>We kept meeting dentists and doctors who were great at patient care but losing ground to competitors with better online presence.</p>
+            <p>We kept meeting small business owners who were great at what they do but losing ground to competitors with better online presence.</p>
             <p>They didn't need a marketing agency. They needed someone who understood AI tools and could deploy them fast — chatbots, review management, automated booking, voice agents.</p>
-            <p>So we built Auxo Advisory. A small, focused team in the Greater Toronto Area that helps medical and dental practices use AI to get more patients without the complexity.</p>
+            <p>So we built Auxo Advisory. A small, focused team that helps local service businesses use AI to get more clients without the complexity.</p>
           </div>
         </FadeIn>
       </div>

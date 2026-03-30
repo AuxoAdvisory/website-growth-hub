@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { Search, Brain, CalendarCheck, Phone, Target, BarChart3, ArrowRight } from "lucide-react";
 
 const steps = [
-  { icon: Search, title: "We build your prospect list", desc: "We use data tools to find local businesses in your area that match the kind of clients you want." },
-  { icon: Brain, title: "We write emails that sound human", desc: "Every email is tailored to the person receiving it. We mention their business, their situation, and why you can help." },
+  { icon: Search, title: "We find your ideal customers", desc: "We use data tools to identify potential clients in your area who need exactly what you offer." },
+  { icon: Brain, title: "We reach out on your behalf", desc: "Every message is tailored to the person receiving it. We mention their situation and why you can help." },
   { icon: CalendarCheck, title: "They book time with you", desc: "When someone's interested, they pick a slot on your calendar. You just show up and have the conversation." },
 ];
 

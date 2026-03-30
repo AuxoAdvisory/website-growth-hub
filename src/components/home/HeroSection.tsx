@@ -11,7 +11,7 @@ const HeroSection = () => (
         <FadeIn>
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-sm text-muted-foreground mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Serving medical &amp; dental practices across the GTA
+            Helping local service businesses grow across Canada
           </div>
         </FadeIn>
         <FadeIn delay={0.1}>
@@ -22,7 +22,7 @@ const HeroSection = () => (
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            We help small medical and dental practices in the GTA get more patients using AI-powered tools — so you can focus on care, not marketing.
+            We help local service businesses get more clients using AI-powered tools — so you can focus on your craft, not marketing.
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>
