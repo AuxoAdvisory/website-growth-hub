@@ -11,7 +11,7 @@ const HeroSection = () => (
         <FadeIn>
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-sm text-muted-foreground mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Now accepting new clients
+            Serving medical &amp; dental practices across the GTA
           </div>
         </FadeIn>
         <FadeIn delay={0.1}>
@@ -22,16 +22,16 @@ const HeroSection = () => (
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            We handle outreach, follow-ups, and booking — so you can focus on the work that matters.
+            We help small medical and dental practices in the GTA get more patients using AI-powered tools — so you can focus on care, not marketing.
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>
           <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
             <Button variant="gold" size="lg" asChild>
-              <Link to="/contact">Get started <ArrowRight className="ml-1.5" size={16} /></Link>
+              <Link to="/contact">Book a free call <ArrowRight className="ml-1.5" size={16} /></Link>
             </Button>
             <Button variant="hero-outline" size="lg" asChild>
-              <Link to="/how-it-works">See how it works</Link>
+              <Link to="/services">See our services</Link>
             </Button>
           </div>
         </FadeIn>

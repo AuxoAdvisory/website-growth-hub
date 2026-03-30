@@ -1,10 +1,11 @@
 import FadeIn from "@/components/FadeIn";
-import { Quote } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 
-const testimonials = [
-  { quote: "I was sceptical, but they booked me 6 calls in week one. I've never had leads come to me like that before.", name: "Dr. Sarah M.", role: "Dental Consultant" },
-  { quote: "We used to cold-call for hours. Now people are booking time on our calendar. Completely different experience.", name: "Mike T.", role: "HVAC Business Owner" },
-  { quote: "The emails they write actually sound like a human wrote them. That's why people reply.", name: "Karen L.", role: "Accounting Firm Partner" },
+const stats = [
+  { value: "2.3x", label: "More Google reviews in 60 days" },
+  { value: "60s", label: "Average patient follow-up time" },
+  { value: "35%", label: "Increase in online bookings" },
+  { value: "24/7", label: "AI receptionist availability" },
 ];
 
 const TestimonialsSection = () => (
@@ -12,22 +13,21 @@ const TestimonialsSection = () => (
     <div className="container-narrow">
       <FadeIn>
         <div className="text-center mb-16">
-          <p className="text-sm font-medium text-primary mb-3">Testimonials</p>
+          <p className="text-sm font-medium text-primary mb-3">Results</p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-            What our clients say
+            Numbers that speak for themselves
           </h2>
         </div>
       </FadeIn>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {testimonials.map((t, i) => (
-          <FadeIn key={t.name} delay={i * 0.1}>
-            <div className="rounded-2xl border border-border bg-card p-8 hover:border-primary/30 transition-all">
-              <Quote className="text-primary/40 mb-4" size={24} />
-              <p className="text-foreground text-sm leading-relaxed">{t.quote}</p>
-              <div className="mt-6 pt-4 border-t border-border">
-                <p className="text-sm font-semibold text-foreground">{t.name}</p>
-                <p className="text-xs text-muted-foreground mt-0.5">{t.role}</p>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {stats.map((s, i) => (
+          <FadeIn key={s.label} delay={i * 0.1}>
+            <div className="rounded-2xl border border-border bg-card p-8 text-center hover:border-primary/30 transition-all">
+              <div className="flex items-center justify-center mb-3">
+                <TrendingUp className="text-primary" size={20} />
               </div>
+              <p className="text-3xl md:text-4xl font-extrabold text-gradient-primary">{s.value}</p>
+              <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{s.label}</p>
             </div>
           </FadeIn>
         ))}
