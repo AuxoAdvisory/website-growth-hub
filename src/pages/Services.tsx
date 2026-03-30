@@ -17,8 +17,8 @@ const services = [
   },
   {
     icon: MessageSquare,
-    title: "Patient Follow-up SMS",
-    desc: "When a new enquiry comes in, our system responds within 60 seconds via SMS. Speed-to-lead is everything — the first practice to respond wins the patient.",
+    title: "Lead Follow-up SMS",
+    desc: "When a new enquiry comes in, our system responds within 60 seconds via SMS. Speed-to-lead is everything — the first business to respond wins the client.",
   },
   {
     icon: CalendarCheck,
