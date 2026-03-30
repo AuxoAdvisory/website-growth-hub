@@ -47,7 +47,7 @@ const Services = () => (
             AI tools that get you more clients
           </h1>
           <p className="mt-5 text-muted-foreground text-lg">
-            Every tool we deploy is designed to do one thing: put more patients on your calendar.
+            Every tool we deploy is designed to do one thing: put more clients on your calendar.
           </p>
         </FadeIn>
       </div>
