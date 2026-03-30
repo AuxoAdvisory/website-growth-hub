@@ -26,7 +26,7 @@ const IndustriesSection = () => (
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary mb-3">The problem</p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-            Is your practice losing patients to competitors?
+            Is your business losing clients to competitors?
           </h2>
         </div>
       </FadeIn>
