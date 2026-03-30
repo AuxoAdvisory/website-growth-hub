@@ -44,7 +44,7 @@ const Services = () => (
         <FadeIn>
           <p className="text-sm font-medium text-primary mb-3">Services</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight">
-            AI tools that get you more patients
+            AI tools that get you more clients
           </h1>
           <p className="mt-5 text-muted-foreground text-lg">
             Every tool we deploy is designed to do one thing: put more patients on your calendar.
