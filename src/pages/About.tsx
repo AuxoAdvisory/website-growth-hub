@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Zap, Eye, TrendingUp, Search, ArrowRight } from "lucide-react";
 
 const values = [
-  { icon: Search, title: "We audit first", desc: "We don't sell you things you don't need. We look at your practice's online presence and find the real gaps." },
+  { icon: Search, title: "We audit first", desc: "We don't sell you things you don't need. We look at your business's online presence and find the real gaps." },
   { icon: Zap, title: "We move fast", desc: "Your tools go live in days, not weeks. We don't waste time on long setups or endless meetings." },
   { icon: Eye, title: "Full transparency", desc: "No black boxes. You see exactly what we're doing, how it's performing, and what's next." },
   { icon: TrendingUp, title: "Results only", desc: "We measure success by one thing: more patients on your calendar." },
