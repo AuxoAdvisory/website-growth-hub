@@ -23,7 +23,7 @@ const services = [
   {
     icon: CalendarCheck,
     title: "Online Booking Integration",
-    desc: "Patients want to book at 10pm on a Sunday. We integrate a seamless online booking system so they can schedule without calling during office hours.",
+    desc: "Clients want to book at 10pm on a Sunday. We integrate a seamless online booking system so they can schedule without calling during office hours.",
   },
   {
     icon: Globe,
