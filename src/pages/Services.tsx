@@ -75,7 +75,7 @@ const Services = () => (
       <div className="container-narrow max-w-2xl mx-auto text-center">
         <FadeIn>
           <h2 className="text-3xl font-extrabold text-foreground">Not sure what you need?</h2>
-          <p className="text-muted-foreground mt-3">We'll audit your practice for free and tell you exactly where you're losing patients.</p>
+          <p className="text-muted-foreground mt-3">We'll audit your business for free and tell you exactly where you're losing clients.</p>
           <Button variant="gold" size="lg" className="mt-8" asChild>
             <Link to="/contact">Book a free audit <ArrowRight className="ml-1" size={18} /></Link>
           </Button>

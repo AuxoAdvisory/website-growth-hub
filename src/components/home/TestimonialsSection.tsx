@@ -3,7 +3,7 @@ import { TrendingUp } from "lucide-react";
 
 const stats = [
   { value: "2.3x", label: "More Google reviews in 60 days" },
-  { value: "60s", label: "Average patient follow-up time" },
+  { value: "60s", label: "Average lead follow-up time" },
   { value: "35%", label: "Increase in online bookings" },
   { value: "24/7", label: "AI receptionist availability" },
 ];

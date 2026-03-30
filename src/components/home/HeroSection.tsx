@@ -22,7 +22,7 @@ const HeroSection = () => (
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            We help small medical and dental practices in the GTA get more patients using AI-powered tools — so you can focus on care, not marketing.
+            We help local service businesses get more clients using AI-powered tools — so you can focus on your craft, not marketing.
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>

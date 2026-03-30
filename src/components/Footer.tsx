@@ -11,7 +11,7 @@ const Footer = () => (
             <span className="font-semibold text-foreground text-base">Auxo Advisory</span>
           </Link>
           <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
-            Done-for-you lead generation and cold outreach for local service businesses.
+            AI-powered growth tools for local service businesses across Canada.
           </p>
         </div>
         <div className="md:col-span-3">
