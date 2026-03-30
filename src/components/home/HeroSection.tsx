@@ -11,18 +11,18 @@ const HeroSection = () => (
         <FadeIn>
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-sm text-muted-foreground mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Helping local service businesses grow across Canada
+            Helping local businesses grow with AI
           </div>
         </FadeIn>
         <FadeIn delay={0.1}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight">
-            Outreach on autopilot,{" "}
-            <span className="text-gradient-primary">Growth on demand.</span>
+            More customers. Less admin.{" "}
+            <span className="text-gradient-primary">Growth on autopilot.</span>
           </h1>
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            We help local service businesses get more clients using AI-powered tools — so you can focus on your craft, not marketing.
+            We install AI-powered systems into local service businesses — so you get more bookings, better reviews, and faster follow-ups without lifting a finger.
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>
