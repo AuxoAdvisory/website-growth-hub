@@ -5,7 +5,7 @@ const painPoints = [
   {
     icon: Star,
     title: "Low Google reviews",
-    desc: "Your competitors have hundreds of reviews. You have a handful. Patients choose them before they even see your website.",
+    desc: "Your competitors have hundreds of reviews. You have a handful. Customers choose them before they even see your website.",
   },
   {
     icon: Globe,
