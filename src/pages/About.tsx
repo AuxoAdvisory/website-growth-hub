@@ -18,7 +18,7 @@ const About = () => (
         <FadeIn>
           <p className="text-sm font-medium text-primary mb-3">About us</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight">
-            A small team helping small practices grow
+            A small team helping small businesses grow
           </h1>
           <p className="mt-5 text-muted-foreground text-lg">GTA-based. No fluff. Just straightforward AI consulting for healthcare.</p>
         </FadeIn>
