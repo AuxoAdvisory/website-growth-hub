@@ -10,7 +10,7 @@ const painPoints = [
   {
     icon: Globe,
     title: "Slow website losing patients",
-    desc: "If your site takes more than 3 seconds to load on mobile, you're losing patients to the clinic down the street.",
+    desc: "If your site takes more than 3 seconds to load on mobile, you're losing clients to the business down the street.",
   },
   {
     icon: AlertTriangle,
