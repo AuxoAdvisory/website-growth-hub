@@ -1,10 +1,10 @@
 import FadeIn from "@/components/FadeIn";
-import { Search, Mail, CalendarCheck } from "lucide-react";
+import { Search, Wrench, TrendingUp } from "lucide-react";
 
 const steps = [
-  { icon: Search, num: "01", title: "We find your people", desc: "We dig through local business data to build a list of prospects who actually need what you offer." },
-  { icon: Mail, num: "02", title: "We write the emails", desc: "Not templates. Every email is written specifically for that person and their business." },
-  { icon: CalendarCheck, num: "03", title: "You take the calls", desc: "Interested prospects book a time with you. That's it — you just show up." },
+  { icon: Search, num: "01", title: "We find the problem", desc: "We audit your online presence — reviews, website speed, booking flow, and search rankings — to find exactly where you're losing patients." },
+  { icon: Wrench, num: "02", title: "We build the fix", desc: "From AI chatbots to review management to website rebuilds — we deploy the right tools to plug the gaps." },
+  { icon: TrendingUp, num: "03", title: "You get more patients", desc: "More bookings, more reviews, more calls. You focus on patient care while we handle the growth." },
 ];
 
 const ProcessSection = () => (

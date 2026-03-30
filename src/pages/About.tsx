@@ -2,13 +2,13 @@ import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Zap, User, Eye, TrendingUp, ArrowRight } from "lucide-react";
+import { Zap, Eye, TrendingUp, Search, ArrowRight } from "lucide-react";
 
 const values = [
-  { icon: Zap, title: "We move fast", desc: "Your campaigns go live in days, not weeks. We don't waste time on long setups." },
-  { icon: User, title: "Every email is personal", desc: "We don't do templates. Each email is written for the person reading it." },
-  { icon: Eye, title: "You see everything", desc: "No black boxes. You get full visibility into what we're doing and how it's performing." },
-  { icon: TrendingUp, title: "Results are all that matter", desc: "We measure success by one thing: booked calls that turn into revenue for you." },
+  { icon: Search, title: "We audit first", desc: "We don't sell you things you don't need. We look at your practice's online presence and find the real gaps." },
+  { icon: Zap, title: "We move fast", desc: "Your tools go live in days, not weeks. We don't waste time on long setups or endless meetings." },
+  { icon: Eye, title: "Full transparency", desc: "No black boxes. You see exactly what we're doing, how it's performing, and what's next." },
+  { icon: TrendingUp, title: "Results only", desc: "We measure success by one thing: more patients on your calendar." },
 ];
 
 const About = () => (
@@ -18,9 +18,9 @@ const About = () => (
         <FadeIn>
           <p className="text-sm font-medium text-primary mb-3">About us</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight">
-            We help local businesses get clients without the grind
+            A small team helping small practices grow
           </h1>
-          <p className="mt-5 text-muted-foreground text-lg">No manual prospecting. No cold calls. Just warm leads on your calendar.</p>
+          <p className="mt-5 text-muted-foreground text-lg">GTA-based. No fluff. Just straightforward AI consulting for healthcare.</p>
         </FadeIn>
       </div>
     </section>
@@ -30,9 +30,9 @@ const About = () => (
         <FadeIn>
           <h2 className="text-2xl md:text-3xl font-extrabold text-foreground">Why we started Auxo Advisory</h2>
           <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
-            <p>We kept meeting people who were brilliant at their work — dentists, plumbers, accountants, lawyers — but struggling to find enough clients.</p>
-            <p>So we built something simple: a service that finds the right people, writes them a genuine email, and gets them on your calendar.</p>
-            <p>Today we work with businesses across 10+ industries, combining smart lead scoring with outreach that actually sounds like it was written by a person.</p>
+            <p>We kept meeting dentists and doctors who were great at patient care but losing ground to competitors with better online presence.</p>
+            <p>They didn't need a marketing agency. They needed someone who understood AI tools and could deploy them fast — chatbots, review management, automated booking, voice agents.</p>
+            <p>So we built Auxo Advisory. A small, focused team in the Greater Toronto Area that helps medical and dental practices use AI to get more patients without the complexity.</p>
           </div>
         </FadeIn>
       </div>
@@ -40,7 +40,7 @@ const About = () => (
 
     <section className="section-padding border-t border-border">
       <div className="container-narrow max-w-4xl mx-auto">
-        <FadeIn><h2 className="text-3xl font-extrabold text-foreground mb-10">What we care about</h2></FadeIn>
+        <FadeIn><h2 className="text-3xl font-extrabold text-foreground mb-10">Our approach</h2></FadeIn>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {values.map((v, i) => (
             <FadeIn key={v.title} delay={i * 0.08}>

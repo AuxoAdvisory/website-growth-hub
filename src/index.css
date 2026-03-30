@@ -2,58 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    --background: 220 10% 7%;
-    --foreground: 40 10% 92%;
+    --background: 222 47% 11%;
+    --foreground: 210 40% 96%;
 
-    --card: 220 10% 10%;
-    --card-foreground: 40 10% 92%;
+    --card: 217 33% 14%;
+    --card-foreground: 210 40% 96%;
 
-    --popover: 220 10% 10%;
-    --popover-foreground: 40 10% 92%;
+    --popover: 217 33% 14%;
+    --popover-foreground: 210 40% 96%;
 
-    --primary: 43 72% 52%;
-    --primary-foreground: 220 20% 8%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 220 10% 13%;
-    --secondary-foreground: 40 10% 85%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 85%;
 
-    --muted: 220 8% 16%;
-    --muted-foreground: 220 8% 50%;
+    --muted: 217 25% 20%;
+    --muted-foreground: 215 20% 55%;
 
-    --accent: 43 72% 52%;
-    --accent-foreground: 220 20% 8%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 8% 18%;
-    --input: 220 8% 18%;
-    --ring: 43 72% 52%;
+    --border: 217 25% 20%;
+    --input: 217 25% 20%;
+    --ring: 38 92% 50%;
 
     --radius: 0.75rem;
 
-    --hero-bg: 220 10% 5%;
-    --hero-foreground: 40 10% 95%;
-    --hero-muted: 220 8% 50%;
-    --gold: 43 72% 52%;
-    --gold-hover: 43 72% 45%;
-    --navy: 220 10% 5%;
-    --navy-light: 220 10% 14%;
+    --hero-bg: 222 47% 8%;
+    --hero-foreground: 210 40% 98%;
+    --hero-muted: 215 20% 55%;
+    --gold: 38 92% 50%;
+    --gold-hover: 38 92% 42%;
+    --navy: 222 47% 8%;
+    --navy-light: 217 33% 17%;
 
-    --font-body: 'DM Sans', -apple-system, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
 
-    --sidebar-background: 220 10% 7%;
-    --sidebar-foreground: 40 10% 85%;
-    --sidebar-primary: 43 72% 52%;
-    --sidebar-primary-foreground: 220 20% 8%;
-    --sidebar-accent: 220 10% 13%;
-    --sidebar-accent-foreground: 40 10% 85%;
-    --sidebar-border: 220 8% 18%;
-    --sidebar-ring: 43 72% 52%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 85%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 85%;
+    --sidebar-border: 217 25% 20%;
+    --sidebar-ring: 38 92% 50%;
   }
 }
 
@@ -88,6 +88,6 @@
 @layer utilities {
   .text-gradient-primary {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(43, 72%, 52%), hsl(38, 80%, 62%));
+    background-image: linear-gradient(135deg, hsl(38, 92%, 50%), hsl(43, 80%, 62%));
   }
 }
