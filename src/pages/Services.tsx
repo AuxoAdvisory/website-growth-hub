@@ -13,7 +13,7 @@ const services = [
   {
     icon: Star,
     title: "Google Review Management",
-    desc: "We set up automated systems that respond to every Google review professionally — positive or negative. More responses means better rankings and more trust from new patients.",
+    desc: "We set up automated systems that respond to every Google review professionally — positive or negative. More responses means better rankings and more trust from new clients.",
   },
   {
     icon: MessageSquare,
