@@ -15,7 +15,7 @@ const painPoints = [
   {
     icon: AlertTriangle,
     title: "No online booking",
-    desc: "Patients want to book at 10pm on a Tuesday. If they can't, they'll find someone who lets them.",
+    desc: "Customers want to book at 10pm on a Tuesday. If they can't, they'll find someone who lets them.",
   },
 ];
 
