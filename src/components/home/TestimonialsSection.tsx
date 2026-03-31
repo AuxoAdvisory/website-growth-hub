@@ -26,7 +26,7 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => (
-  <section className="section-padding border-t border-border">
+  <section className="section-padding border-t border-border/50">
     <div className="container-narrow">
       <FadeIn>
         <div className="text-center mb-14">
@@ -38,12 +38,12 @@ const TestimonialsSection = () => (
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <div className="max-w-2xl mx-auto px-12">
+        <div className="max-w-2xl mx-auto px-4 md:px-12">
           <Carousel opts={{ loop: true }}>
             <CarouselContent>
               {testimonials.map((t) => (
                 <CarouselItem key={t.name}>
-                  <div className="rounded-lg border border-border bg-card p-8 text-center">
+                  <div className="rounded-lg border border-border bg-card p-6 md:p-8 text-center">
                     <blockquote className="text-foreground text-sm md:text-base leading-relaxed">
                       "{t.quote}"
                     </blockquote>
