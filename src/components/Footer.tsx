@@ -1,33 +1,67 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => (
-  <footer className="border-t border-border">
-    <div className="container-narrow px-6 md:px-10 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-        <div className="md:col-span-5">
-          <span className="font-semibold text-foreground text-sm tracking-tight">Auxo Advisory</span>
-          <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed max-w-xs">
+  <footer className="border-t border-border/60">
+    <div className="container-narrow px-6 md:px-10 py-14 md:py-16">
+      <div className="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-6">
+        {/* Brand */}
+        <div className="col-span-2 md:col-span-4">
+          <span className="text-[13px] font-medium text-foreground tracking-[-0.01em]">
+            Auxo Advisory
+          </span>
+          <p className="mt-2.5 text-[12px] text-muted-foreground/60 leading-relaxed max-w-[220px]">
             AI-powered growth for local service businesses across Canada.
           </p>
         </div>
-        <div className="md:col-span-3">
-          <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3">Product</h4>
-          <div className="flex flex-col gap-2 text-[13px] text-muted-foreground">
-            <Link to="/how-it-works" className="hover:text-foreground transition-colors">How It Works</Link>
-            <Link to="/pricing" className="hover:text-foreground transition-colors">Pricing</Link>
-            <Link to="/results" className="hover:text-foreground transition-colors">Results</Link>
+
+        {/* Product */}
+        <div className="col-span-1 md:col-span-2">
+          <p className="text-[11px] text-muted-foreground/40 mb-3">Product</p>
+          <div className="flex flex-col gap-2">
+            <Link to="/how-it-works" className="text-[12px] text-muted-foreground/70 hover:text-foreground transition-colors duration-200">How It Works</Link>
+            <Link to="/pricing" className="text-[12px] text-muted-foreground/70 hover:text-foreground transition-colors duration-200">Pricing</Link>
+            <Link to="/results" className="text-[12px] text-muted-foreground/70 hover:text-foreground transition-colors duration-200">Results</Link>
+            <Link to="/services" className="text-[12px] text-muted-foreground/70 hover:text-foreground transition-colors duration-200">Services</Link>
           </div>
         </div>
-        <div className="md:col-span-4">
-          <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3">Company</h4>
-          <div className="flex flex-col gap-2 text-[13px] text-muted-foreground">
-            <Link to="/about" className="hover:text-foreground transition-colors">About</Link>
-            <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
+
+        {/* Company */}
+        <div className="col-span-1 md:col-span-2">
+          <p className="text-[11px] text-muted-foreground/40 mb-3">Company</p>
+          <div className="flex flex-col gap-2">
+            <Link to="/about" className="text-[12px] text-muted-foreground/70 hover:text-foreground transition-colors duration-200">About</Link>
+            <Link to="/contact" className="text-[12px] text-muted-foreground/70 hover:text-foreground transition-colors duration-200">Contact</Link>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div className="col-span-1 md:col-span-2">
+          <p className="text-[11px] text-muted-foreground/40 mb-3">Resources</p>
+          <div className="flex flex-col gap-2">
+            <Link to="/contact" className="text-[12px] text-muted-foreground/70 hover:text-foreground transition-colors duration-200">Book a Call</Link>
+            <Link to="/pricing" className="text-[12px] text-muted-foreground/70 hover:text-foreground transition-colors duration-200">FAQ</Link>
+          </div>
+        </div>
+
+        {/* Connect */}
+        <div className="col-span-1 md:col-span-2">
+          <p className="text-[11px] text-muted-foreground/40 mb-3">Connect</p>
+          <div className="flex flex-col gap-2">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-[12px] text-muted-foreground/70 hover:text-foreground transition-colors duration-200">LinkedIn</a>
+            <a href="mailto:hello@auxoadvisory.com" className="text-[12px] text-muted-foreground/70 hover:text-foreground transition-colors duration-200">Email</a>
           </div>
         </div>
       </div>
-      <div className="border-t border-border mt-10 pt-6 text-xs text-muted-foreground">
-        <p>© {new Date().getFullYear()} Auxo Advisory. All rights reserved.</p>
+
+      {/* Bottom bar */}
+      <div className="border-t border-border/40 mt-12 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+        <p className="text-[11px] text-muted-foreground/40">
+          © {new Date().getFullYear()} Auxo Advisory
+        </p>
+        <div className="flex gap-4">
+          <span className="text-[11px] text-muted-foreground/30">Privacy</span>
+          <span className="text-[11px] text-muted-foreground/30">Terms</span>
+        </div>
       </div>
     </div>
   </footer>
