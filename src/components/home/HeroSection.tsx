@@ -1,9 +1,31 @@
+import { useState, useEffect } from "react";
 import FadeIn from "@/components/FadeIn";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-const HeroSection = () => (
+const headlines = [
+  <>More patients. Less no-shows.{" "}<span className="text-gradient-primary">Growth on autopilot.</span></>,
+  <>More clients. Less missed calls.{" "}<span className="text-gradient-primary">Growth on autopilot.</span></>,
+  <>More bookings. Less admin.{" "}<span className="text-gradient-primary">Growth on autopilot.</span></>,
+];
+
+const HeroSection = () => {
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setVisible(false);
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % headlines.length);
+        setVisible(true);
+      }, 400);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
   <section className="relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
     <div className="container-narrow relative z-10 px-6 md:px-10 py-32 md:py-44 lg:py-52">
