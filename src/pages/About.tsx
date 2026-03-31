@@ -17,7 +17,7 @@ const About = () => (
       <div className="container-narrow max-w-3xl mx-auto">
         <FadeIn>
           <p className="text-[11px] font-medium text-accent/60 mb-4 tracking-[0.2em] uppercase font-mono">About us</p>
-          <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight">
             A small team helping small businesses grow
           </h1>
           <p className="mt-5 text-muted-foreground text-base">Canadian-based. No fluff. Just straightforward AI consulting for local businesses.</p>
