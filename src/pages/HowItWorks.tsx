@@ -31,7 +31,7 @@ const HowItWorks = () => (
 
     <section className="section-padding border-t border-border">
       <div className="container-narrow max-w-3xl mx-auto">
-        <FadeIn><h2 className="text-3xl font-extrabold text-foreground mb-12">Three steps. That's it.</h2></FadeIn>
+        <FadeIn><h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-12">Three steps. That's it.</h2></FadeIn>
         <div className="space-y-6">
           {steps.map((s, i) => (
             <FadeIn key={s.title} delay={i * 0.1}>
@@ -53,7 +53,7 @@ const HowItWorks = () => (
 
     <section className="section-padding border-t border-border">
       <div className="container-narrow max-w-3xl mx-auto">
-        <FadeIn><h2 className="text-3xl font-extrabold text-foreground mb-10">After you sign up</h2></FadeIn>
+        <FadeIn><h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-10">After you sign up</h2></FadeIn>
         <div className="space-y-4">
           {timeline.map((t, i) => (
             <FadeIn key={t.title} delay={i * 0.1}>
@@ -76,7 +76,7 @@ const HowItWorks = () => (
     <section className="section-padding border-t border-border">
       <div className="container-narrow max-w-2xl mx-auto text-center">
         <FadeIn>
-          <h2 className="text-3xl font-extrabold text-foreground">Sound like what you need?</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">Sound like what you need?</h2>
           <p className="text-muted-foreground mt-3">Let's chat. No commitment required.</p>
           <Button variant="gold" size="lg" className="mt-8" asChild>
             <Link to="/contact">Book a free call <ArrowRight className="ml-1" size={18} /></Link>
