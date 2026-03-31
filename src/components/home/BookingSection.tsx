@@ -7,7 +7,7 @@ const BookingSection = () => (
     <div className="absolute inset-0 dot-grid opacity-20" />
     <div className="container-narrow max-w-2xl mx-auto text-center relative z-10">
       <FadeIn>
-        <h2 className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">
+        <h2 className="text-3xl md:text-[2.75rem] font-bold text-foreground tracking-tight">
           See it in action — book a free 15-min call
         </h2>
         <p className="text-muted-foreground mt-4 text-sm md:text-base leading-relaxed max-w-md mx-auto">

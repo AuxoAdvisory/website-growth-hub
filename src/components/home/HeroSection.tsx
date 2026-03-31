@@ -103,7 +103,7 @@ const HeroSection = () => {
           >
             <div className="min-h-[3.5rem] md:min-h-[5rem] lg:min-h-[6.5rem] flex items-center justify-center">
               <h1
-                className="text-4xl md:text-6xl lg:text-[4.5rem] font-semibold leading-[1.05] tracking-[-0.03em] transition-all duration-350"
+                className="text-4xl md:text-6xl lg:text-[4.5rem] font-bold leading-[1.05] tracking-[-0.035em] transition-all duration-350"
                 style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(4px)" }}
               >
                 <span className="text-foreground">{headlines[index].main}</span>
