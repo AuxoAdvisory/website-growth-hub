@@ -1,8 +1,5 @@
 import Layout from "@/components/Layout";
-import FadeIn from "@/components/FadeIn";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import HeroSection from "@/components/home/HeroSection";
 import HeroSection from "@/components/home/HeroSection";
 import SocialProof from "@/components/home/SocialProof";
 import WhoWeWorkWith from "@/components/home/WhoWeWorkWith";
