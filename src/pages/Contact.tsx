@@ -36,7 +36,7 @@ const Contact = () => {
       <section className="section-padding">
         <div className="container-narrow max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
           <FadeIn>
-            <div className="rounded-lg border border-border bg-card p-8 flex flex-col items-center justify-center min-h-[400px] text-center">
+            <div className="rounded-lg border border-border bg-card p-6 md:p-8 flex flex-col items-center justify-center min-h-[300px] md:min-h-[400px] text-center">
               <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-4">
                 <CalendarCheck className="text-accent" size={20} />
               </div>
