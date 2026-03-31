@@ -10,6 +10,7 @@ import IndustriesSection from "@/components/home/IndustriesSection";
 import ProcessSection from "@/components/home/ProcessSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
+import BookingSection from "@/components/home/BookingSection";
 
 const Index = () => (
   <Layout>
@@ -20,6 +21,7 @@ const Index = () => (
     <ProcessSection />
     <FeaturesSection />
     <TestimonialsSection />
+    <BookingSection />
 
     {/* Final CTA */}
     <section className="section-padding border-t border-border">
