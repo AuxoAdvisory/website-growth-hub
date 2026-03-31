@@ -101,9 +101,9 @@ const HeroSection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="min-h-[3.5rem] md:min-h-[5rem] lg:min-h-[6.5rem] flex items-center justify-center">
+            <div className="min-h-[4rem] md:min-h-[5rem] lg:min-h-[6.5rem] flex items-center justify-center px-1">
               <h1
-                className="text-4xl md:text-6xl lg:text-[4.5rem] font-bold leading-[1.05] tracking-[-0.035em] transition-all duration-350"
+                className="text-[2rem] sm:text-4xl md:text-6xl lg:text-[4.5rem] font-bold leading-[1.1] tracking-[-0.035em] transition-all duration-350"
                 style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(4px)" }}
               >
                 <span className="text-foreground">{headlines[index].main}</span>
