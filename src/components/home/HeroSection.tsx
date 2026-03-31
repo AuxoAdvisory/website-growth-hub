@@ -28,7 +28,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section ref={ref} className="relative overflow-hidden min-h-[90vh] flex items-center justify-center">
+    <section ref={ref} className="relative overflow-hidden min-h-[85vh] md:min-h-[90vh] flex items-center justify-center">
       {/* Animated gradient mesh background */}
       <div className="absolute inset-0">
         {/* Base dark */}
