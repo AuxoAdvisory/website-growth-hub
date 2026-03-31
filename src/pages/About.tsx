@@ -60,7 +60,7 @@ const About = () => (
     <section className="section-padding border-t border-border">
       <div className="container-narrow max-w-2xl mx-auto text-center">
         <FadeIn>
-          <h2 className="text-3xl font-extrabold text-foreground">Want to work together?</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">Want to work together?</h2>
           <p className="text-muted-foreground mt-3">Let's have a quick conversation. No obligations.</p>
           <Button variant="gold" size="lg" className="mt-8" asChild>
             <Link to="/contact">Book a free call <ArrowRight className="ml-1" size={18} /></Link>
