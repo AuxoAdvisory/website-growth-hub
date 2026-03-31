@@ -66,6 +66,7 @@ const Pricing = () => (
                 )}
                 <h3 className="font-bold text-xl text-foreground">{plan.name}</h3>
                 <p className="text-muted-foreground text-sm mt-1">{plan.desc}</p>
+                <p className="text-xs font-medium text-primary/80 mt-2 italic">{plan.anchor}</p>
                 <ul className="mt-6 space-y-3 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-sm text-foreground">
