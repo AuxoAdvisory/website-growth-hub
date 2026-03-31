@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import HeroSection from "@/components/home/HeroSection";
+import WhoWeWorkWith from "@/components/home/WhoWeWorkWith";
 import IndustriesSection from "@/components/home/IndustriesSection";
 import ProcessSection from "@/components/home/ProcessSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
