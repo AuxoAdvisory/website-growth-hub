@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/home/HeroSection";
-import HeroSection from "@/components/home/HeroSection";
 import SocialProof from "@/components/home/SocialProof";
 import WhoWeWorkWith from "@/components/home/WhoWeWorkWith";
 import IndustriesSection from "@/components/home/IndustriesSection";
