@@ -9,18 +9,21 @@ const plans = [
   {
     name: "Starter",
     desc: "The essentials to start converting more leads.",
+    anchor: "Replaces ~$800/month in missed opportunities",
     features: ["AI Receptionist Chatbot", "Google Review Management", "Monthly performance report", "Email support"],
     highlighted: false,
   },
   {
     name: "Growth",
     desc: "Our most popular option.",
+    anchor: "Most clients see ROI within 30 days",
     features: ["Everything in Starter", "Customer Follow-up SMS", "Online Booking Integration", "Weekly performance reports", "Priority support"],
     highlighted: true,
   },
   {
     name: "Scale",
     desc: "The full stack — every tool we offer.",
+    anchor: "Full-stack growth — hands completely off",
     features: ["Everything in Growth", "Website Rebuild", "AI Voice Agent", "Custom reporting", "Dedicated account manager"],
     highlighted: false,
   },
@@ -41,7 +44,7 @@ const Pricing = () => (
         <FadeIn>
           <p className="text-sm font-medium text-primary mb-3">Pricing</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight">Simple, transparent pricing</h1>
-          <p className="mt-5 text-muted-foreground text-lg">No hidden fees, no long contracts. Get in touch and we'll find the right fit.</p>
+          <p className="mt-3 text-sm font-medium text-primary">No contracts. Cancel anytime. Setup included.</p>
         </FadeIn>
       </div>
     </section>
@@ -63,6 +66,7 @@ const Pricing = () => (
                 )}
                 <h3 className="font-bold text-xl text-foreground">{plan.name}</h3>
                 <p className="text-muted-foreground text-sm mt-1">{plan.desc}</p>
+                <p className="text-xs font-medium text-primary/80 mt-2 italic">{plan.anchor}</p>
                 <ul className="mt-6 space-y-3 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-sm text-foreground">
