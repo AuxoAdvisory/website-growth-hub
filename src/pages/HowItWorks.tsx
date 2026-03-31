@@ -53,7 +53,7 @@ const HowItWorks = () => (
 
     <section className="section-padding border-t border-border">
       <div className="container-narrow max-w-3xl mx-auto">
-        <FadeIn><h2 className="text-3xl font-extrabold text-foreground mb-10">After you sign up</h2></FadeIn>
+        <FadeIn><h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-10">After you sign up</h2></FadeIn>
         <div className="space-y-4">
           {timeline.map((t, i) => (
             <FadeIn key={t.title} delay={i * 0.1}>
