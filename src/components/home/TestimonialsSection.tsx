@@ -38,7 +38,7 @@ const TestimonialsSection = () => (
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <div className="max-w-2xl mx-auto px-12">
+        <div className="max-w-2xl mx-auto px-4 md:px-12">
           <Carousel opts={{ loop: true }}>
             <CarouselContent>
               {testimonials.map((t) => (
