@@ -43,7 +43,7 @@ const TestimonialsSection = () => (
             <CarouselContent>
               {testimonials.map((t) => (
                 <CarouselItem key={t.name}>
-                  <div className="rounded-lg border border-border bg-card p-8 text-center">
+                  <div className="rounded-lg border border-border bg-card p-6 md:p-8 text-center">
                     <blockquote className="text-foreground text-sm md:text-base leading-relaxed">
                       "{t.quote}"
                     </blockquote>
