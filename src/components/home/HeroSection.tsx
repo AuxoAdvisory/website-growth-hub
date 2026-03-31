@@ -36,12 +36,14 @@ const HeroSection = () => {
             Helping local businesses grow with AI
           </div>
         </FadeIn>
-        <FadeIn delay={0.1}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight">
-            More customers. Less admin.{" "}
-            <span className="text-gradient-primary">Growth on autopilot.</span>
+        <div className="h-[4.5rem] md:h-[7rem] lg:h-[8.5rem] flex items-center justify-center">
+          <h1
+            className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight transition-opacity duration-400"
+            style={{ opacity: visible ? 1 : 0 }}
+          >
+            {headlines[index]}
           </h1>
-        </FadeIn>
+        </div>
         <FadeIn delay={0.2}>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
             We install AI-powered systems into local service businesses — so you get more bookings, better reviews, and faster follow-ups without lifting a finger.
@@ -60,6 +62,7 @@ const HeroSection = () => {
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default HeroSection;
