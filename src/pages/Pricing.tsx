@@ -2,20 +2,26 @@ import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Check, ArrowRight } from "lucide-react";
+import { ArrowRight, Bot, Star, MessageSquare, CalendarCheck, Phone, Globe, BarChart3, FileText, UserCheck } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-const plans = [
-  { name: "Starter", desc: "The essentials to start converting more leads.", anchor: "Replaces ~$800/month in missed opportunities", features: ["AI Receptionist Chatbot", "Google Review Management", "Monthly performance report", "Email support"], highlighted: false },
-  { name: "Growth", desc: "Our most popular option.", anchor: "Most clients see ROI within 30 days", features: ["Everything in Starter", "Customer Follow-up SMS", "Online Booking Integration", "Weekly performance reports", "Priority support"], highlighted: true },
-  { name: "Scale", desc: "The full stack — every tool we offer.", anchor: "Full-stack growth — hands completely off", features: ["Everything in Growth", "Website Rebuild", "AI Voice Agent", "Custom reporting", "Dedicated account manager"], highlighted: false },
+const services = [
+  { icon: Bot, name: "AI Receptionist Chatbot", desc: "24/7 website chatbot that answers questions, captures leads, and books appointments.", price: "$299/mo" },
+  { icon: Star, name: "Google Review Management", desc: "Automated responses to every Google review — positive or negative.", price: "$199/mo" },
+  { icon: MessageSquare, name: "Customer Follow-up SMS", desc: "Instant SMS responses to new enquiries within 60 seconds.", price: "$249/mo" },
+  { icon: CalendarCheck, name: "Online Booking Integration", desc: "Let clients book appointments any time, without calling.", price: "$149/mo" },
+  { icon: Phone, name: "AI Voice Agent", desc: "AI-powered phone answering that books appointments automatically.", price: "$399/mo" },
+  { icon: Globe, name: "Website Rebuild", desc: "Fast, mobile-optimised website built to convert visitors into clients.", price: "From $2,500" },
+  { icon: BarChart3, name: "Custom Reporting", desc: "Tailored dashboards and reports showing exactly what matters to you.", price: "$149/mo" },
+  { icon: FileText, name: "Monthly Performance Reports", desc: "Clear monthly summaries of leads, bookings, and growth metrics.", price: "$99/mo" },
+  { icon: UserCheck, name: "Dedicated Account Manager", desc: "A single point of contact who knows your business inside out.", price: "$199/mo" },
 ];
 
 const faqs = [
   { q: "What kind of businesses do you work with?", a: "Any local service business — dentists, gyms, law firms, trades, salons, accountants, clinics, and more. If you serve local customers, we can help." },
   { q: "How fast will I see results?", a: "Most clients see measurable improvements within the first 2–4 weeks. Chatbots and review management start working immediately after setup." },
   { q: "Do I need to set anything up?", a: "No. We handle the full setup — integrations, configuration, and testing. You just keep running your business." },
-  { q: "Can I upgrade my plan later?", a: "Absolutely. Start with Starter and add tools as you grow. No penalties for switching." },
+  { q: "Can I add or remove services later?", a: "Absolutely. Mix and match as you grow. No penalties for changing your selection." },
   { q: "Can I cancel anytime?", a: "Yes. No long-term contracts. 30 days' notice and you're out." },
 ];
 
@@ -25,43 +31,53 @@ const Pricing = () => (
       <div className="container-narrow max-w-3xl mx-auto text-center">
         <FadeIn>
           <p className="text-[11px] font-medium text-accent mb-4 tracking-[0.2em] uppercase font-mono">Pricing</p>
-          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight">Simple, transparent pricing</h1>
+          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight">
+            Pick what you need.<br className="hidden sm:block" /> Pay for what you use.
+          </h1>
+          <p className="mt-4 text-muted-foreground text-base max-w-md mx-auto">
+            Mix and match services tailored to your business. No bundles, no waste.
+          </p>
           <p className="mt-3 text-xs font-mono font-medium text-accent">No contracts · Cancel anytime · Setup included</p>
         </FadeIn>
       </div>
     </section>
 
     <section className="section-padding">
-      <div className="container-narrow">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {plans.map((plan, i) => (
-            <FadeIn key={plan.name} delay={i * 0.08}>
-              <div className={`rounded-lg p-6 border flex flex-col h-full transition-colors ${
-                plan.highlighted
-                  ? "border-accent/40 bg-accent/5 relative glow-accent shadow-sm"
-                  : "border-border bg-card shadow-sm hover:border-accent/30 hover:shadow-[0_4px_24px_-8px_hsl(226_100%_71%_/_0.1)] transition-all duration-300"
-              }`}>
-                {plan.highlighted && (
-                  <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-[11px] font-medium px-3 py-0.5 rounded-md">Popular</span>
-                )}
-                <h3 className="font-semibold text-base text-foreground">{plan.name}</h3>
-                <p className="text-muted-foreground text-[13px] mt-1">{plan.desc}</p>
-                <p className="text-[11px] font-mono font-medium text-accent mt-2">{plan.anchor}</p>
-                <ul className="mt-5 space-y-2.5 flex-1">
-                  {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-[13px] text-foreground">
-                      <Check className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <Button variant={plan.highlighted ? "default" : "outline"} size="default" className="mt-6 w-full" asChild>
-                  <Link to="/contact">Book a free call <ArrowRight className="ml-1" size={14} /></Link>
-                </Button>
+      <div className="container-narrow max-w-3xl mx-auto">
+        <div className="space-y-2">
+          {services.map((s, i) => (
+            <FadeIn key={s.name} delay={i * 0.04}>
+              <div className="group rounded-lg border border-border bg-card p-4 md:p-5 shadow-sm hover:border-accent/40 hover:shadow-[0_4px_24px_-8px_hsl(226_100%_71%_/_0.12)] transition-all duration-300 flex items-center gap-4">
+                <div className="flex-shrink-0 w-9 h-9 rounded-md bg-accent/10 flex items-center justify-center group-hover:bg-accent/15 transition-colors">
+                  <s.icon className="text-accent" size={16} />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-sm font-semibold text-foreground">{s.name}</h3>
+                  <p className="text-[13px] text-muted-foreground mt-0.5 leading-relaxed truncate md:whitespace-normal">{s.desc}</p>
+                </div>
+                <div className="flex-shrink-0 text-right">
+                  <span className="text-sm font-semibold text-foreground">{s.price}</span>
+                </div>
               </div>
             </FadeIn>
           ))}
         </div>
+
+        <FadeIn delay={0.4}>
+          <div className="mt-10 text-center">
+            <Button
+              size="lg"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-[0_0_30px_-5px_hsl(226_100%_71%_/_0.3)] hover:shadow-[0_0_40px_-5px_hsl(226_100%_71%_/_0.4)] transition-all duration-300"
+              asChild
+            >
+              <Link to="/contact">
+                Book a free call
+                <ArrowRight className="ml-1" size={14} />
+              </Link>
+            </Button>
+            <p className="mt-3 text-[12px] text-muted-foreground">We'll recommend the right combination for your business.</p>
+          </div>
+        </FadeIn>
       </div>
     </section>
 
