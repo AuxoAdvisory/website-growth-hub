@@ -116,6 +116,6 @@
     box-shadow: 0 0 50px -12px hsl(226 100% 71% / 0.25);
   }
   .border-glow {
-    border-color: hsl(235 90% 64% / 0.25);
+    border-color: hsl(226 100% 71% / 0.25);
   }
 }
