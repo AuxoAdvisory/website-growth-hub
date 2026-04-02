@@ -1,157 +1,125 @@
 import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Bot, Star, MessageSquare, Phone, Users, TrendingUp, Clock, Zap } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
-const quadrants = [
-  { icon: Bot, name: "AI Receptionist Chatbot", desc: "24/7 chatbot that answers questions, captures leads, and books appointments.", quote: '"Booked 3 new clients in the first month."', popular: true },
-  { icon: Star, name: "Google Review Management", desc: "Automated responses to every review — boosting your rankings and reputation.", quote: '"Our Google rating went from 3.8 to 4.7 in 8 weeks."', popular: false },
-  { icon: MessageSquare, name: "Customer Follow-up SMS", desc: "Instant SMS responses to new enquiries within 60 seconds.", quote: '"We stopped losing leads to competitors overnight."', popular: false },
-  { icon: Phone, name: "AI Voice Agent", desc: "AI-powered phone answering that books appointments automatically.", quote: '"Saved us 10 hours a week on phone calls."', popular: false },
-];
-
-const stats = [
-  { icon: Users, label: "50+ clients served" },
-  { icon: TrendingUp, label: "Avg 4× ROI" },
-  { icon: Clock, label: "Results in 30 days" },
-  { icon: Zap, label: "Setup in 48 hours" },
+const services = [
+  { title: "Google Review Management", body: "We respond to every review within 24 hours in your voice, handle negative reviews professionally, and send automated SMS to happy clients requesting new reviews. Most businesses double their review count within 60 days.", result: "23 → 67 reviews in 6 weeks" },
+  { title: "Online Booking Setup", body: "We implement and connect a booking system to your website and Google listing. Clients book at any hour without calling. Appointments appear directly in your calendar.", result: "40+ appointments added in month one" },
+  { title: "AI Receptionist", body: "An AI system answers after-hours enquiries, qualifies new clients, and captures contact details while you sleep. No missed opportunities.", result: "Captures leads 24/7 without adding staff" },
+  { title: "Automated Client Follow-Up", body: "Automated SMS follow-up for every new enquiry. Clients who go quiet get a timely message. Conversion rates improve immediately.", result: "3x more leads converted in the first month" },
+  { title: "No-Show Reminder System", body: "Automated appointment reminders sent 48 hours and 2 hours before each booking. Reduces no-shows significantly from the first week.", result: "31% reduction in no-shows on average" },
+  { title: "Website Rebuild", body: "Fast, mobile-first website built to convert visitors into booked clients. Clear CTA. No clutter. Loads in under 2 seconds.", result: "Built and live within 2 weeks" },
 ];
 
 const faqs = [
-  { q: "What kind of businesses do you work with?", a: "Any local service business — dentists, gyms, law firms, trades, salons, accountants, clinics, and more. If you serve local customers, we can help." },
-  { q: "How fast will I see results?", a: "Most clients see measurable improvements within the first 2–4 weeks. Chatbots and review management start working immediately after setup." },
-  { q: "Do I need to set anything up?", a: "No. We handle the full setup — integrations, configuration, and testing. You just keep running your business." },
-  { q: "Can I add or remove services later?", a: "Absolutely. Mix and match as you grow. No penalties for changing your selection." },
-  { q: "Can I cancel anytime?", a: "Yes. No long-term contracts. 30 days' notice and you're out." },
+  { q: "Is there a contract or minimum commitment?", a: "No contracts. No minimum term. You can cancel any service at any time. We keep clients because the results speak for themselves — not because they are locked in." },
+  { q: "How quickly will I see results?", a: "Most clients see measurable results within 30 days — more reviews, more bookings, or fewer missed calls depending on which service you start with. We track everything and report back monthly." },
+  { q: "Do I need to do anything to get started?", a: "Very little. We handle the setup entirely. We will need access to your Google Business Profile and your website, and a 30-minute onboarding call to understand your business. After that, we manage everything." },
+  { q: "Can I add more services later?", a: "Yes. Most clients start with one service and add more as they see results. Each service is $1,400 per month and can be added or removed at any time." },
+  { q: "What kinds of businesses do you work with?", a: "We work with established local service businesses across the Greater Toronto Area — primarily specialist practices, professional services, and trade businesses with an existing client base who want to improve how they attract and retain clients online." },
 ];
 
-const Pricing = () => (
-  <Layout>
-    {/* Header */}
-    <section className="section-padding pt-24 md:pt-36">
-      <div className="container-narrow max-w-3xl mx-auto text-center">
-        <FadeIn>
-          <p className="text-[11px] font-medium text-accent mb-4 tracking-[0.2em] uppercase font-mono">Pricing</p>
-          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight">
-            Choose Your Service
-          </h1>
-          <p className="mt-4 text-muted-foreground text-base max-w-md mx-auto">
-            Simple, transparent pricing. Pick what fits your business.
-          </p>
-          <p className="mt-3 text-xs font-mono font-medium text-accent">No contracts · Cancel anytime · Setup included</p>
-        </FadeIn>
-      </div>
-    </section>
+const Pricing = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-    {/* Trust bar + stats */}
-    <section className="px-5 md:px-10 pb-6">
-      <div className="container-narrow max-w-4xl mx-auto">
-        <FadeIn>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-muted-foreground font-mono">
-              Trusted by local businesses across 10+ industries
+  return (
+    <Layout>
+      {/* HERO */}
+      <section style={{ backgroundColor: "#FAFAFA", padding: "80px 64px" }}>
+        <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
+          <FadeIn>
+            <span className="inline-block" style={{ backgroundColor: "#EFF6FF", color: "#2563EB", borderRadius: 20, padding: "6px 14px", fontSize: 12, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>
+              Pricing
+            </span>
+            <h1 style={{ fontSize: 48, fontWeight: 800, color: "#111827", lineHeight: 1.15, marginTop: 16 }}>
+              Simple pricing.<br />Specific results.
+            </h1>
+            <p style={{ fontSize: 18, color: "#6B7280", lineHeight: 1.7, marginTop: 20, maxWidth: 580, marginLeft: "auto", marginRight: "auto" }}>
+              $1,400 per month, per service. No setup fees. No contracts. We implement everything and manage it on an ongoing basis — you see results within 30 days or we keep working until you do.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              {stats.map((s) => (
-                <span
-                  key={s.label}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1 text-[11px] font-medium text-foreground shadow-sm"
-                >
-                  <s.icon size={12} className="text-accent" />
-                  {s.label}
-                </span>
-              ))}
-            </div>
-          </div>
-        </FadeIn>
-      </div>
-    </section>
+          </FadeIn>
+        </div>
+      </section>
 
-    {/* 2×2 Grid */}
-    <section className="section-padding pt-8 md:pt-12">
-      <div className="container-narrow max-w-4xl mx-auto">
-        <FadeIn>
-          <div className="rounded-xl border border-border bg-card shadow-sm overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              {quadrants.map((s, i) => (
-                <div
-                  key={s.name}
-                  className={`group relative p-8 md:p-10 flex flex-col transition-all duration-300 hover:bg-accent/[0.03] hover:scale-[1.02] hover:z-10 hover:shadow-[0_0_30px_-6px_hsl(226_100%_71%_/_0.18)] hover:border-accent/40 ${
-                    i < 2 ? "border-b border-border" : ""
-                  } ${i % 2 === 0 ? "md:border-r border-border" : ""} ${
-                    i === 2 ? "border-b border-border md:border-b-0" : ""
-                  }`}
-                >
-                  {s.popular && (
-                    <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground border-accent text-[10px] font-semibold px-2 py-0.5">
-                      Most Popular
-                    </Badge>
-                  )}
-                  <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/15 transition-colors">
-                    <s.icon className="text-accent" size={20} />
+      {/* SERVICE CARDS */}
+      <section style={{ backgroundColor: "#F5F4F0", padding: "80px 64px" }}>
+        <div className="container-narrow">
+          <FadeIn>
+            <h2 style={{ fontSize: 32, fontWeight: 800, color: "#111827", textAlign: "center", marginBottom: 48 }}>
+              Six services. Pick what your business needs most.
+            </h2>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((s, i) => (
+              <FadeIn key={i} delay={i * 0.06}>
+                <div className="h-full flex flex-col justify-between" style={{ backgroundColor: "#FFFFFF", borderRadius: 12, boxShadow: "0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)", padding: "36px 32px" }}>
+                  <div>
+                    <h3 style={{ fontSize: 20, fontWeight: 700, color: "#111827", marginBottom: 12 }}>{s.title}</h3>
+                    <p style={{ fontSize: 15, color: "#6B7280", lineHeight: 1.65 }}>{s.body}</p>
+                    <p style={{ fontSize: 13, fontWeight: 600, color: "#2563EB", marginTop: 16, fontStyle: "italic" }}>{s.result}</p>
+                    <p style={{ fontSize: 22, fontWeight: 800, color: "#111827", marginTop: 20 }}>$1,400 / month</p>
                   </div>
-                  <h3 className="text-base font-semibold text-foreground">{s.name}</h3>
-                  <p className="text-[13px] text-muted-foreground mt-2 leading-relaxed">{s.desc}</p>
-                  <p className="text-[12px] italic text-muted-foreground/70 mt-2">{s.quote}</p>
-                  <div className="mt-6 flex items-center gap-4 pt-2">
-                    <Button
-                      size="sm"
-                      className="bg-foreground text-background hover:bg-foreground/90 hover:shadow-md font-semibold"
-                      asChild
-                    >
-                      <Link to="/contact">Contact <ArrowRight size={13} /></Link>
-                    </Button>
-                    <Link
-                      to="/services"
-                      className="text-[13px] text-accent font-medium hover:underline underline-offset-4 transition-colors"
-                    >
-                      Learn more
-                    </Link>
+                  <Link to="/contact" className="block text-center" style={{ backgroundColor: "#111827", color: "#FFFFFF", fontWeight: 600, fontSize: 14, padding: "12px 24px", borderRadius: 8, width: "100%", marginTop: 24 }}>
+                    Book a Call
+                  </Link>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NOT SURE BANNER */}
+      <section style={{ backgroundColor: "#FAFAFA", padding: "40px 64px" }}>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6" style={{ backgroundColor: "#EFF6FF", borderRadius: 16, padding: "36px 48px" }}>
+          <div>
+            <p style={{ fontSize: 20, fontWeight: 700, color: "#111827" }}>Not sure which service is right for your business?</p>
+            <p style={{ fontSize: 15, color: "#6B7280", marginTop: 8 }}>Book a free 15-minute call. We will audit your online presence and tell you specifically which one or two services will have the biggest impact.</p>
+          </div>
+          <Link to="/contact" className="inline-block whitespace-nowrap text-center" style={{ backgroundColor: "#2563EB", color: "#FFFFFF", fontWeight: 600, padding: "14px 28px", borderRadius: 8, flexShrink: 0 }}>
+            Book a Free Call
+          </Link>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section style={{ backgroundColor: "#FAFAFA", padding: "80px 64px" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <FadeIn>
+            <div className="text-center mb-2">
+              <span className="inline-block" style={{ backgroundColor: "#EFF6FF", color: "#2563EB", borderRadius: 20, padding: "6px 14px", fontSize: 12, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                Common Questions
+              </span>
+            </div>
+            <h2 style={{ fontSize: 36, fontWeight: 800, color: "#111827", marginBottom: 40, textAlign: "center" }}>
+              Questions we get asked
+            </h2>
+          </FadeIn>
+          <div>
+            {faqs.map((faq, i) => (
+              <FadeIn key={i} delay={i * 0.04}>
+                <div style={{ borderBottom: "1px solid #E5E7EB" }}>
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full flex items-center justify-between text-left"
+                    style={{ padding: "20px 0", fontSize: 17, fontWeight: 600, color: "#111827" }}
+                  >
+                    {faq.q}
+                    <ChevronDown size={18} style={{ color: "#9CA3AF", flexShrink: 0, marginLeft: 16, transform: openFaq === i ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 200ms ease" }} />
+                  </button>
+                  <div style={{ maxHeight: openFaq === i ? 300 : 0, overflow: "hidden", transition: "max-height 300ms ease" }}>
+                    <p style={{ fontSize: 15, color: "#6B7280", lineHeight: 1.65, paddingBottom: 20 }}>{faq.a}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </FadeIn>
-      </div>
-    </section>
-
-    {/* Decision CTA strip */}
-    <section className="px-5 md:px-10 py-10 md:py-14">
-      <div className="container-narrow max-w-4xl mx-auto">
-        <FadeIn>
-          <div className="rounded-lg border border-border bg-card p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
-            <p className="text-sm text-foreground font-medium text-center sm:text-left">
-              Not sure which service is right for you? <span className="text-accent">→</span> Book a free 15-minute strategy call
-            </p>
-            <Button size="default" className="bg-accent text-accent-foreground hover:bg-accent/90 hover:shadow-[0_0_20px_-4px_hsl(226_100%_71%_/_0.3)] transition-all shrink-0 font-semibold" asChild>
-              <Link to="/contact">Book a free call <ArrowRight size={14} /></Link>
-            </Button>
-          </div>
-        </FadeIn>
-      </div>
-    </section>
-
-    {/* FAQ */}
-    <section className="section-padding border-t border-border">
-      <div className="container-narrow max-w-2xl mx-auto">
-        <FadeIn><h2 className="text-2xl font-semibold text-foreground mb-6 tracking-tight">Common questions</h2></FadeIn>
-        <FadeIn delay={0.1}>
-          <Accordion type="single" collapsible>
-            {faqs.map((faq, i) => (
-              <AccordionItem key={i} value={`faq-${i}`} className="border-border">
-                <AccordionTrigger className="font-medium text-sm text-foreground text-left">{faq.q}</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-[13px] leading-relaxed">{faq.a}</AccordionContent>
-              </AccordionItem>
+              </FadeIn>
             ))}
-          </Accordion>
-        </FadeIn>
-      </div>
-    </section>
-  </Layout>
-);
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
 
 export default Pricing;
