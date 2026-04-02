@@ -7,21 +7,25 @@ const results = [
 ];
 
 const ResultsSection = () => (
-  <section className="section-padding bg-background">
+  <section className="section-padding" style={{ backgroundColor: "#FAFAFA" }}>
     <div className="container-narrow">
       <FadeIn>
-        <p className="text-center text-[12px] uppercase tracking-[0.15em] text-accent font-medium mb-4" style={{ fontFamily: "var(--font-body)" }}>Results</p>
-        <h2 className="text-center text-[28px] md:text-[40px] text-foreground leading-tight">
+        <div className="text-center mb-4">
+          <span className="inline-block text-[12px] uppercase tracking-[0.05em] rounded-full px-3.5 py-1.5" style={{ backgroundColor: "#EFF6FF", color: "#2563EB", fontWeight: 600 }}>
+            Results
+          </span>
+        </div>
+        <h2 className="text-center text-[28px] md:text-[40px] leading-tight" style={{ color: "#111827", fontWeight: 800 }}>
           Specific outcomes. Not vague promises.
         </h2>
       </FadeIn>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-14">
         {results.map((r, i) => (
           <FadeIn key={i} delay={i * 0.08}>
-            <div className="rounded-lg p-9" style={{ backgroundColor: "#EBF2FF", border: "1px solid #BFDBFE" }}>
-              <p className="text-[40px] font-bold text-accent mb-2">{r.number}</p>
-              <p className="text-[14px] font-semibold text-foreground mb-3" style={{ fontFamily: "var(--font-body)" }}>{r.label}</p>
-              <p className="text-[14px] text-muted-foreground leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{r.desc}</p>
+            <div className="rounded-xl" style={{ backgroundColor: "#EFF6FF", border: "1px solid #BFDBFE", padding: "36px 28px" }}>
+              <p className="text-[42px] mb-2" style={{ color: "#2563EB", fontWeight: 800 }}>{r.number}</p>
+              <p className="text-[14px] mb-2" style={{ color: "#111827", fontWeight: 600 }}>{r.label}</p>
+              <p className="text-[14px] leading-[1.5]" style={{ color: "#6B7280" }}>{r.desc}</p>
             </div>
           </FadeIn>
         ))}
