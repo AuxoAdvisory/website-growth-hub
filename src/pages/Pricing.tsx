@@ -4,15 +4,14 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const services = [
-  { title: "Google Review Management", body: "We respond to every review within 24 hours in your voice, handle negative reviews professionally, and send automated SMS to happy clients requesting new reviews. Most businesses double their review count within 60 days.", result: "23 → 67 reviews in 6 weeks" },
-  { title: "Online Booking Setup", body: "We implement and connect a booking system to your website and Google listing. Clients book at any hour without calling. Appointments appear directly in your calendar.", result: "40+ appointments added in month one" },
-  { title: "AI Receptionist", body: "An AI system answers after-hours enquiries, qualifies new clients, and captures contact details while you sleep. No missed opportunities.", result: "Captures leads 24/7 without adding staff" },
-  { title: "Automated Client Follow-Up", body: "Automated SMS follow-up for every new enquiry. Clients who go quiet get a timely message. Conversion rates improve immediately.", result: "3x more leads converted in the first month" },
-  { title: "No-Show Reminder System", body: "Automated appointment reminders sent 48 hours and 2 hours before each booking. Reduces no-shows significantly from the first week.", result: "31% reduction in no-shows on average" },
-  { title: "Website Rebuild", body: "Fast, mobile-first website built to convert visitors into booked clients. Clear CTA. No clutter. Loads in under 2 seconds.", result: "Built and live within 2 weeks" },
+const rows = [
+  { name: "Google Review Management", outcome: "We respond to every review within 24 hours and generate new reviews automatically.", stat: "23 → 67 reviews in 6 weeks" },
+  { name: "Online Booking Setup", outcome: "Clients book appointments at any hour without calling you.", stat: "40+ bookings added in month one" },
+  { name: "AI Receptionist", outcome: "Answers after-hours enquiries and captures leads while you sleep.", stat: "Zero missed enquiries" },
+  { name: "Automated Client Follow-Up", outcome: "SMS follow-up for every new enquiry so no lead goes cold.", stat: "3x more leads converted" },
+  { name: "No-Show Reminder System", outcome: "Automated reminders reduce cancellations from the first week.", stat: "31% fewer no-shows" },
+  { name: "Website Rebuild", outcome: "Fast, mobile-first site built to convert visitors into booked clients.", stat: "Live within 2 weeks" },
 ];
-
 const faqs = [
   { q: "Is there a contract or minimum commitment?", a: "No contracts. No minimum term. You can cancel any service at any time. We keep clients because the results speak for themselves — not because they are locked in." },
   { q: "How quickly will I see results?", a: "Most clients see measurable results within 30 days — more reviews, more bookings, or fewer missed calls depending on which service you start with. We track everything and report back monthly." },
