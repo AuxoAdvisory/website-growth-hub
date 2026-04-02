@@ -11,6 +11,8 @@ const rows = [
   { name: "Automated Client Follow-Up", outcome: "SMS follow-up for every new enquiry so no lead goes cold.", stat: "3x more leads converted" },
   { name: "No-Show Reminder System", outcome: "Automated reminders reduce cancellations from the first week.", stat: "31% fewer no-shows" },
   { name: "Website Rebuild", outcome: "Fast, mobile-first site built to convert visitors into booked clients.", stat: "Live within 2 weeks" },
+  { name: "Google Business Profile Optimisation", outcome: "We complete, optimise, and maintain your Google listing so you rank higher in local search.", stat: "More visibility in local search" },
+  { name: "No-Show Reminder System", outcome: "Automated appointment reminders sent 48 and 2 hours before each booking.", stat: "31% fewer no-shows" },
 ];
 const faqs = [
   { q: "Is there a contract or minimum commitment?", a: "No contracts. No minimum term. You can cancel any service at any time. We keep clients because the results speak for themselves — not because they are locked in." },
@@ -83,23 +85,42 @@ const Pricing = () => {
             </div>
           </FadeIn>
 
-          {/* CTA */}
-          <div style={{ marginTop: 48, textAlign: "center" }}>
-            <FadeIn>
-              <p style={{ fontSize: 20, fontWeight: 700, color: "#111827" }}>Not sure which service to start with?</p>
-              <p style={{ fontSize: 15, color: "#6B7280", maxWidth: 480, margin: "12px auto 0", lineHeight: 1.65 }}>
-                Book a free 15-minute call. We will review your online presence and tell you exactly which one or two services will have the biggest impact on your business.
-              </p>
-              <Link
-                to="/contact"
-                className="inline-block"
-                style={{ backgroundColor: "#2563EB", color: "#FFFFFF", fontWeight: 600, fontSize: 16, padding: "16px 36px", borderRadius: 10, boxShadow: "0 4px 14px rgba(37,99,235,0.3)", marginTop: 28 }}
-              >
-                Book a Free 15-Minute Call
-              </Link>
-            </FadeIn>
-          </div>
         </div>
+      </section>
+
+      {/* CTA SECTION */}
+      <section style={{ backgroundColor: "#111827", padding: "80px 64px", textAlign: "center" }}>
+        <FadeIn>
+          <span className="inline-block" style={{ backgroundColor: "rgba(37,99,235,0.2)", color: "#93C5FD", borderRadius: 20, padding: "6px 14px", fontSize: 12, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>
+            Get Started
+          </span>
+          <h2 style={{ fontSize: 40, fontWeight: 800, color: "#FFFFFF", maxWidth: 580, margin: "16px auto 0", lineHeight: 1.15 }}>
+            Ready to see what we would fix for your business?
+          </h2>
+          <p style={{ fontSize: 17, color: "rgba(255,255,255,0.65)", maxWidth: 500, margin: "20px auto 0", lineHeight: 1.7 }}>
+            Book a free 15-minute call. We will review your online presence before we speak and give you a specific breakdown of which services will have the biggest impact — and what it is worth to fix them.
+          </p>
+          <div className="flex flex-wrap justify-center gap-10" style={{ marginTop: 32 }}>
+            {["No contracts", "Free audit included", "Results within 30 days"].map((item) => (
+              <span key={item} style={{ fontSize: 14, fontWeight: 500, color: "rgba(255,255,255,0.7)" }}>
+                <span style={{ color: "#2563EB", marginRight: 6 }}>✓</span>{item}
+              </span>
+            ))}
+          </div>
+          <Link
+            to="/contact"
+            className="inline-block"
+            style={{ backgroundColor: "#2563EB", color: "#FFFFFF", fontWeight: 600, fontSize: 16, padding: "18px 48px", borderRadius: 10, border: "none", boxShadow: "0 4px 20px rgba(37,99,235,0.5)", marginTop: 40 }}
+          >
+            Book a Free 15-Minute Call
+          </Link>
+          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", marginTop: 16 }}>
+            Prefer to email?{" "}
+            <a href="mailto:Tim@auxoadvisory.ca" style={{ color: "rgba(255,255,255,0.6)" }}>
+              Tim@auxoadvisory.ca
+            </a>
+          </p>
+        </FadeIn>
       </section>
 
       {/* FAQ */}
