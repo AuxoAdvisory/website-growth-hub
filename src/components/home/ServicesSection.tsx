@@ -21,10 +21,10 @@ const ServicesSection = () => (
           Every system is built, managed, and optimised by us. Nothing lands on your team.
         </p>
       </FadeIn>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
         {services.map((s, i) => (
           <FadeIn key={i} delay={i * 0.05}>
-            <div className="rounded-lg border border-border bg-card p-8 h-full">
+            <div className="rounded-lg border border-border bg-card p-8 h-full hover:border-accent transition-colors duration-200">
               <h3 className="text-[20px] text-foreground mb-3">{s.title}</h3>
               <p className="text-[15px] text-muted-foreground leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{s.body}</p>
             </div>
