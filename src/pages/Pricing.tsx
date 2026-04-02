@@ -17,7 +17,7 @@ const faqs = [
   { q: "Is there a contract or minimum commitment?", a: "No contracts. No minimum term. You can cancel any service at any time. We keep clients because the results speak for themselves — not because they are locked in." },
   { q: "How quickly will I see results?", a: "Most clients see measurable results within 30 days — more reviews, more bookings, or fewer missed calls depending on which service you start with. We track everything and report back monthly." },
   { q: "Do I need to do anything to get started?", a: "Very little. We handle the setup entirely. We will need access to your Google Business Profile and your website, and a 30-minute onboarding call to understand your business. After that, we manage everything." },
-  { q: "Can I add more services later?", a: "Yes. Most clients start with one service and add more as they see results. Each service is $1,400 per month and can be added or removed at any time." },
+  { q: "Can I add more services later?", a: "Yes. Most clients start with one service and add more as they see results. Each service can be added or removed at any time." },
   { q: "What kinds of businesses do you work with?", a: "We work with established local service businesses across the Greater Toronto Area — primarily specialist practices, professional services, and trade businesses with an existing client base who want to improve how they attract and retain clients online." },
 ];
 
