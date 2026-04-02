@@ -37,7 +37,7 @@ const Pricing = () => {
               Simple pricing.<br />Specific results.
             </h1>
             <p style={{ fontSize: 18, color: "#6B7280", lineHeight: 1.7, marginTop: 20, maxWidth: 580, marginLeft: "auto", marginRight: "auto" }}>
-              $1,400 per month, per service. No setup fees. No contracts. We implement everything and manage it on an ongoing basis — you see results within 30 days or we keep working until you do.
+              No setup fees. No contracts. We implement everything and manage it on an ongoing basis — you see results within 30 days or we keep working until you do.
             </p>
           </FadeIn>
         </div>
