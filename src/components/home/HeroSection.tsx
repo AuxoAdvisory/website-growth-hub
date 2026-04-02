@@ -42,7 +42,7 @@ const BeforeAfterCard = () => (
 );
 
 const HeroSection = () => (
-  <section className="px-6 md:px-16 pt-[120px] pb-[100px]" style={{ backgroundColor: "#FAFAFA" }}>
+  <section className="px-6 md:px-16 pt-[80px] pb-[80px]" style={{ backgroundColor: "#FAFAFA" }}>
     <div className="container-narrow">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         <div className="lg:col-span-7 lg:pr-12">
