@@ -42,44 +42,63 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* SERVICE CARDS */}
+      {/* PRICING TABLE */}
       <section style={{ backgroundColor: "#F5F4F0", padding: "80px 64px" }}>
         <div className="container-narrow">
           <FadeIn>
-            <h2 style={{ fontSize: 32, fontWeight: 800, color: "#111827", textAlign: "center", marginBottom: 48 }}>
-              Six services. Pick what your business needs most.
+            <h2 style={{ fontSize: 32, fontWeight: 800, color: "#111827", textAlign: "center", marginBottom: 12 }}>
+              Everything is $1,400/month.
             </h2>
+            <p style={{ fontSize: 17, color: "#6B7280", textAlign: "center", marginBottom: 48 }}>
+              Pick one service or combine several. Each is built, managed, and optimised by us. Nothing lands on your team.
+            </p>
           </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => (
-              <FadeIn key={i} delay={i * 0.06}>
-                <div className="h-full flex flex-col justify-between" style={{ backgroundColor: "#FFFFFF", borderRadius: 12, boxShadow: "0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)", padding: "36px 32px" }}>
-                  <div>
-                    <h3 style={{ fontSize: 20, fontWeight: 700, color: "#111827", marginBottom: 12 }}>{s.title}</h3>
-                    <p style={{ fontSize: 15, color: "#6B7280", lineHeight: 1.65 }}>{s.body}</p>
-                    <p style={{ fontSize: 13, fontWeight: 600, color: "#2563EB", marginTop: 16, fontStyle: "italic" }}>{s.result}</p>
-                    <p style={{ fontSize: 22, fontWeight: 800, color: "#111827", marginTop: 20 }}>Contact Us</p>
+          <FadeIn>
+            <div style={{ backgroundColor: "#FFFFFF", borderRadius: 16, boxShadow: "0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)", overflow: "hidden" }}>
+              {rows.map((r, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-6"
+                  style={{
+                    padding: "24px 36px",
+                    borderBottom: i < rows.length - 1 ? "1px solid #F3F4F6" : "none",
+                    transition: "background 200ms ease",
+                    cursor: "default",
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#F9FAFB")}
+                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = "transparent")}
+                >
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <p style={{ fontSize: 17, fontWeight: 700, color: "#111827", marginBottom: 4 }}>{r.name}</p>
+                    <p style={{ fontSize: 14, color: "#6B7280", lineHeight: 1.5 }}>{r.outcome}</p>
                   </div>
-                  <Link to="/contact" className="block text-center" style={{ backgroundColor: "#111827", color: "#FFFFFF", fontWeight: 600, fontSize: 14, padding: "12px 24px", borderRadius: 8, width: "100%", marginTop: 24 }}>
-                    Book a Call
-                  </Link>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: "#2563EB", backgroundColor: "#EFF6FF", borderRadius: 20, padding: "4px 12px", whiteSpace: "nowrap", alignSelf: "center" }}>
+                    {r.stat}
+                  </span>
+                  <span style={{ fontSize: 16, fontWeight: 700, color: "#111827", whiteSpace: "nowrap" }}>
+                    $1,400/mo
+                  </span>
                 </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
+              ))}
+            </div>
+          </FadeIn>
 
-      {/* NOT SURE BANNER */}
-      <section style={{ backgroundColor: "#FAFAFA", padding: "40px 64px" }}>
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6" style={{ backgroundColor: "#EFF6FF", borderRadius: 16, padding: "36px 48px" }}>
-          <div>
-            <p style={{ fontSize: 20, fontWeight: 700, color: "#111827" }}>Not sure which service is right for your business?</p>
-            <p style={{ fontSize: 15, color: "#6B7280", marginTop: 8 }}>Book a free 15-minute call. We will audit your online presence and tell you specifically which one or two services will have the biggest impact.</p>
+          {/* CTA */}
+          <div style={{ marginTop: 48, textAlign: "center" }}>
+            <FadeIn>
+              <p style={{ fontSize: 20, fontWeight: 700, color: "#111827" }}>Not sure which service to start with?</p>
+              <p style={{ fontSize: 15, color: "#6B7280", maxWidth: 480, margin: "12px auto 0", lineHeight: 1.65 }}>
+                Book a free 15-minute call. We will review your online presence and tell you exactly which one or two services will have the biggest impact on your business.
+              </p>
+              <Link
+                to="/contact"
+                className="inline-block"
+                style={{ backgroundColor: "#2563EB", color: "#FFFFFF", fontWeight: 600, fontSize: 16, padding: "16px 36px", borderRadius: 10, boxShadow: "0 4px 14px rgba(37,99,235,0.3)", marginTop: 28 }}
+              >
+                Book a Free 15-Minute Call
+              </Link>
+            </FadeIn>
           </div>
-          <Link to="/contact" className="inline-block whitespace-nowrap text-center" style={{ backgroundColor: "#2563EB", color: "#FFFFFF", fontWeight: 600, padding: "14px 28px", borderRadius: 8, flexShrink: 0 }}>
-            Book a Free Call
-          </Link>
         </div>
       </section>
 
