@@ -15,23 +15,27 @@ const Stars = () => (
 );
 
 const TestimonialsSection = () => (
-  <section className="section-padding border-t border-border" style={{ backgroundColor: "#F4F3F0" }}>
+  <section className="section-padding" style={{ backgroundColor: "#F5F4F0" }}>
     <div className="container-narrow">
       <FadeIn>
-        <p className="text-center text-[12px] uppercase tracking-[0.15em] text-accent font-medium mb-4" style={{ fontFamily: "var(--font-body)" }}>What Clients Say</p>
-        <h2 className="text-center text-[28px] md:text-[40px] text-foreground leading-tight">
+        <div className="text-center mb-4">
+          <span className="inline-block text-[12px] uppercase tracking-[0.05em] rounded-full px-3.5 py-1.5" style={{ backgroundColor: "#EFF6FF", color: "#2563EB", fontWeight: 600 }}>
+            What Clients Say
+          </span>
+        </div>
+        <h2 className="text-center text-[28px] md:text-[40px] leading-tight" style={{ color: "#111827", fontWeight: 800 }}>
           From the people we work with.
         </h2>
       </FadeIn>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-14">
         {testimonials.map((t, i) => (
           <FadeIn key={i} delay={i * 0.08}>
-            <div className="rounded-lg border border-border bg-card p-8 h-full flex flex-col">
+            <div className="rounded-xl h-full flex flex-col" style={{ backgroundColor: "#FFFFFF", boxShadow: "0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)", padding: "32px" }}>
               <Stars />
-              <p className="text-[16px] text-foreground leading-[1.7] flex-1 mb-6 italic" style={{ fontFamily: "var(--font-body)" }}>"{t.quote}"</p>
+              <p className="text-[16px] leading-[1.75] flex-1 mb-5 italic" style={{ color: "#111827", fontWeight: 400 }}>"{t.quote}"</p>
               <div>
-                <p className="text-[14px] font-semibold text-foreground" style={{ fontFamily: "var(--font-body)" }}>{t.name}</p>
-                <p className="text-[13px] text-muted-foreground mt-1" style={{ fontFamily: "var(--font-body)" }}>{t.title}</p>
+                <p className="text-[14px]" style={{ color: "#111827", fontWeight: 700 }}>{t.name}</p>
+                <p className="text-[13px] mt-1" style={{ color: "#9CA3AF" }}>{t.title}</p>
               </div>
             </div>
           </FadeIn>
