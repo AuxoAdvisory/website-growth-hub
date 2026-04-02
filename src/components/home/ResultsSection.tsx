@@ -18,7 +18,7 @@ const ResultsSection = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-14">
         {results.map((r, i) => (
           <FadeIn key={i} delay={i * 0.08}>
-            <div className="rounded-lg border border-border bg-background p-9">
+            <div className="rounded-lg p-9" style={{ backgroundColor: "#0F1623", border: "1px solid #1E3A5F" }}>
               <p className="text-[36px] font-bold text-accent mb-2">{r.number}</p>
               <p className="text-[14px] font-medium text-foreground mb-3" style={{ fontFamily: "var(--font-body)" }}>{r.label}</p>
               <p className="text-[14px] text-muted-foreground leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{r.desc}</p>
